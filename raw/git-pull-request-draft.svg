@@ -1,0 +1,15 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#010101;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<circle class="st0" cx="16.8" cy="17.5" r="2.5"/>
+<g>
+	<circle class="st0" cx="7.2" cy="17.5" r="2.5"/>
+	<circle class="st0" cx="7.2" cy="6.5" r="2.5"/>
+	<line class="st0" x1="7.2" y1="9" x2="7.2" y2="15"/>
+</g>
+<circle class="st0" cx="16.8" cy="12.5" r="0.2"/>
+<circle class="st0" cx="16.8" cy="9.5" r="0.2"/>
+<circle class="st0" cx="16.8" cy="6.5" r="0.2"/>
+</svg>

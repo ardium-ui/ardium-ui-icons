@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="9.9312" y1="10" x2="2.9312" y2="3"/>
+	<line class="st0" x1="9.9312" y1="10" x2="9.9312" y2="4.225"/>
+	<line class="st0" x1="4.1562" y1="10" x2="9.9312" y2="10"/>
+</g>
+<g>
+	<line class="st0" x1="13.9312" y1="14" x2="20.9312" y2="21"/>
+	<line class="st0" x1="13.9312" y1="14" x2="13.9312" y2="19.775"/>
+	<line class="st0" x1="19.7062" y1="14" x2="13.9312" y2="14"/>
+</g>
+</svg>

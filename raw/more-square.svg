@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#101013;}</style>
+<g>
+	<circle class="st0" cx="12.025" cy="12" r="1.125"/>
+	<circle class="st0" cx="17.212" cy="12" r="1.125"/>
+	<circle class="st0" cx="6.926" cy="12" r="1.125"/>
+</g>
+<path class="st0" d="M16.5,21h-9C5,21,3,19,3,16.5v-9C3,5,5,3,7.5,3h9C19,3,21,5,21,7.5v9C21,19,19,21,16.5,21z"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="9.5" y1="12" x2="21" y2="12"/>
+	<line class="st0" x1="3" y1="12" x2="5.5" y2="12"/>
+	<path class="st0" d="M6.75,10h1.5c0.6904,0,1.25,0.5596,1.25,1.25v1.5C9.5,13.4404,8.9404,14,8.25,14h-1.5
+		c-0.6904,0-1.25-0.5596-1.25-1.25v-1.5C5.5,10.5596,6.0596,10,6.75,10z"/>
+</g>
+<g>
+	<line class="st0" x1="14.5" y1="6" x2="3" y2="6"/>
+	<line class="st0" x1="21" y1="6" x2="18.5" y2="6"/>
+	<path class="st0" d="M15.75,4h1.5c0.6904,0,1.25,0.5596,1.25,1.25v1.5C18.5,7.4404,17.9404,8,17.25,8h-1.5
+		c-0.6904,0-1.25-0.5596-1.25-1.25v-1.5C14.5,4.5596,15.0596,4,15.75,4z"/>
+</g>
+<g>
+	<line class="st0" x1="14.5" y1="18" x2="3" y2="18"/>
+	<line class="st0" x1="21" y1="18" x2="18.5" y2="18"/>
+	<path class="st0" d="M15.75,16h1.5c0.6904,0,1.25,0.5596,1.25,1.25v1.5c0,0.6904-0.5596,1.25-1.25,1.25h-1.5
+		c-0.6904,0-1.25-0.5596-1.25-1.25v-1.5C14.5,16.5596,15.0596,16,15.75,16z"/>
+</g>
+</svg>

@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
+<g>
+	<path class="st0" d="M19,9.044c0,3.866-3.134,7-7,7s-7-3.134-7-7H19z"/>
+	<g>
+		<line class="st0" x1="14.333" y1="15.646" x2="16.25" y2="20.986"/>
+		<line class="st0" x1="9.667" y1="15.646" x2="7.75" y2="20.986"/>
+		<line class="st0" x1="8.378" y1="19.236" x2="15.622" y2="19.236"/>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M8.979,5.027C8.712,5.275,8.482,5.598,8.482,6.045c0,0.397,0.191,0.745,0.458,0.968"/>
+	<path class="st0" d="M15.518,5.027c-0.267,0.248-0.497,0.571-0.497,1.018c0,0.397,0.191,0.745,0.458,0.968"/>
+	<path class="st0" d="M12.32,2.986c0.267,0.223,0.458,0.571,0.458,0.968c0,0.447-0.263,0.824-0.53,1.072
+		c-0.267,0.248-0.497,0.571-0.497,1.018c0,0.397,0.191,0.745,0.458,0.968"/>
+</g>
+</svg>

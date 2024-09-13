@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<line class="st0" x1="8" y1="21" x2="16" y2="21"/>
+	<line class="st0" x1="12" y1="17" x2="12" y2="21"/>
+</g>
+<ellipse class="st0" cx="12" cy="5" rx="5" ry="2"/>
+<path class="st0" d="M17,5l1.135,6.359c0.097,0.541,0.125,1.102-0.009,1.635C17.551,15.279,15.027,17,12,17
+	s-5.551-1.721-6.127-4.007c-0.134-0.533-0.105-1.094-0.009-1.635L7,5"/>
+</svg>
