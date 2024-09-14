@@ -24,6 +24,14 @@ for (const fileName of fileNames) {
     content = content.replace(/class="st[1-9]"/g, "class=\"st0\"");
   }
 
+  const foundImages = content.match(/<image/g);
+  if (foundImages) {
+    content = content.replace(
+      /(\u000d\n)?<image.+?(\u000d\n)?.*?>(\u000d\n)?<\/image>/g,
+      ""
+    );
+  }
+
   const foundNewlines = content.match(/\u000d\n(\u000d\n)+/g);
   if (foundNewlines) {
     content = content.replace(/\u000d\n(\u000d\n)+/g, "");

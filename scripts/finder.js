@@ -21,6 +21,7 @@ const strokes = {};
 const fills = {};
 const displayNones = {};
 const st1s = {};
+const images = {};
 for (const fileName of fileNames) {
   const content = fs.readFileSync(path + fileName, "utf-8");
 
@@ -69,6 +70,11 @@ for (const fileName of fileNames) {
   if (foundSt1s?.length) {
     st1s[fileName] = foundSt1s;
   }
+
+  const foundImages = content.match(/<image/g);
+  if (foundImages?.length) {
+    images[fileName] = foundImages;
+  }
 }
 fs.writeFileSync("comments.json", JSON.stringify(comments, null, 2));
 fs.writeFileSync("titles.json", JSON.stringify(titles, null, 2));
@@ -77,5 +83,6 @@ fs.writeFileSync("strokes.json", JSON.stringify(strokes, null, 2));
 fs.writeFileSync("fills.json", JSON.stringify(fills, null, 2));
 fs.writeFileSync("displayNones.json", JSON.stringify(displayNones, null, 2));
 fs.writeFileSync("st1s.json", JSON.stringify(st1s, null, 2));
+fs.writeFileSync("images.json", JSON.stringify(images, null, 2));
 
 console.log(`Finished analyzing ${fileNames.length} files`);
