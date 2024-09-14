@@ -1,6 +1,10 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path d="M9.64698 14.8233L6.82306 17.6472M6.82306 17.6472L4 14.8233M6.82306 17.6472L6.82278 6.35156" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 17.6469H13.4111M20 11.9996H13.4111M20.0002 6.35156H11.5293" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M9.647,14.8233l-2.8239,2.8239 M6.8231,17.6472L4,14.8233 M6.8231,17.6472L6.8228,6.3516"/>
+	<path class="st0" d="M20,17.6469h-6.5889 M20,11.9996h-6.5889 M20.0002,6.3516h-8.4709"/>
 </g>
 </svg>

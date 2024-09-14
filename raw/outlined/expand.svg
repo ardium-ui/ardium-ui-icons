@@ -1,8 +1,12 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path d="M8.80966 18.4734L6.24376 18.4785C5.71201 18.4796 5.2807 18.0482 5.28186 17.5164L5.28744 14.9512" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.28933 8.5715L5.28375 6.00579C5.28259 5.47397 5.71402 5.04254 6.24584 5.0437L8.81155 5.04928" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.7115 14.9512L18.7172 17.5169C18.7184 18.0487 18.2869 18.4801 17.7551 18.479L15.1894 18.4734" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.1885 5.04894L17.7548 5.0437C18.2867 5.04262 18.7181 5.47414 18.7169 6.006L18.7107 8.57117" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M8.8097,18.4734l-2.5659,0.0051c-0.5318,0.0011-0.9631-0.4303-0.9619-0.9621l0.0056-2.5652"/>
+	<path class="st0" d="M5.2893,8.5715L5.2838,6.0058C5.2826,5.474,5.714,5.0425,6.2458,5.0437l2.5657,0.0056"/>
+	<path class="st0" d="M18.7115,14.9512l0.0057,2.5657c0.0012,0.5318-0.4303,0.9632-0.9621,0.9621l-2.5657-0.0056"/>
+	<path class="st0" d="M15.1885,5.0489l2.5663-0.0052c0.5319-0.0011,0.9633,0.4304,0.9621,0.9623l-0.0062,2.5652"/>
 </g>
 </svg>

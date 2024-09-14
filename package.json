@@ -6,7 +6,10 @@
     "serve": "cd projects/playground && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "find-issues": "cd scripts && node NODE-finder.js",
+    "cleanup-icons": "cd scripts && node NODE-cleanuper.js",
+    "build-publish": "rmdir /s /Q dist & cd scripts && node NODE-angular-components.js && cd ../projects/icons && ng build --configuration=production && npm run build-sass && cd ../../scripts && node copy-scss.js && cd ../dist/icons && npm publish && cd ../../"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +23,7 @@
     "@angular/router": "^17.0.0",
     "@ardium-ui/devkit": "^1.1.0",
     "rxjs": "~7.8.0",
+    "sass": "^1.78.0",
     "simple-bool": "^3.0.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

@@ -1,9 +1,15 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}</style>
 <g>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.63336V5.10193C9 4.28269 9.662 3.61816 10.4791 3.61816H14.5219C15.339 3.61816 16 4.28269 16 5.10193V6.63337C16 7.45357 15.339 8.1181 14.5219 8.1181H10.4791C9.662 8.1181 9 7.45357 9 6.63336Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 19.1343V17.6028C3.5 16.7836 4.162 16.1191 4.97909 16.1191H9.02188C9.83897 16.1191 10.5 16.7836 10.5 17.6028V19.1343C10.5 19.9545 9.83897 20.619 9.02188 20.619H4.97909C4.162 20.619 3.5 19.9545 3.5 19.1343Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 19.1343V17.6028C14.5 16.7836 15.162 16.1191 15.9791 16.1191H20.0219C20.839 16.1191 21.5 16.7836 21.5 17.6028V19.1343C21.5 19.9545 20.839 20.619 20.0219 20.619H15.9791C15.162 20.619 14.5 19.9545 14.5 19.1343Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.5 8.11816V12.1182" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M18 16.1191V14.1191C18 13.0145 17.1046 12.1191 16 12.1191H9C7.89543 12.1191 7 13.0145 7 14.1191V16.1191" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+	<path class="st0" d="M9,6.6334V5.1019c0-0.8192,0.662-1.4838,1.4791-1.4838h4.0428C15.339,3.6182,16,4.2827,16,5.1019v1.5314
+		c0,0.8202-0.661,1.4847-1.4781,1.4847h-4.0428C9.662,8.1181,9,7.4536,9,6.6334z"/>
+	<path class="st0" d="M3.5,19.1343v-1.5315c0-0.8192,0.662-1.4837,1.4791-1.4837h4.0428c0.8171,0,1.4781,0.6645,1.4781,1.4837
+		v1.5315c0,0.8202-0.661,1.4847-1.4781,1.4847H4.9791C4.162,20.619,3.5,19.9545,3.5,19.1343z"/>
+	<path class="st0" d="M14.5,19.1343v-1.5315c0-0.8192,0.662-1.4837,1.4791-1.4837h4.0428c0.8171,0,1.4781,0.6645,1.4781,1.4837
+		v1.5315c0,0.8202-0.661,1.4847-1.4781,1.4847h-4.0428C15.162,20.619,14.5,19.9545,14.5,19.1343z"/>
+	<path class="st0" d="M12.5,8.1182v4"/>
+	<path class="st0" d="M18,16.1191v-2c0-1.1046-0.8954-2-2-2H9c-1.1046,0-2,0.8954-2,2v2"/>
 </g>
 </svg>

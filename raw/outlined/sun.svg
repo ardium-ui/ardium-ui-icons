@@ -1,24 +1,23 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}</style>
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
 <g>
-	<circle class="st0" cx="12" cy="12" r="3.9"/>
-	<g>
-		<line class="st0" x1="12" y1="5.1" x2="12" y2="3.5"/>
-		<line class="st0" x1="12" y1="20.5" x2="12" y2="18.9"/>
-	</g>
-	<g>
-		<line class="st0" x1="16.9" y1="7.1" x2="18" y2="6"/>
-		<line class="st0" x1="6" y1="18" x2="7.1" y2="16.9"/>
-	</g>
-	<g>
-		<line class="st0" x1="18.9" y1="12" x2="20.5" y2="12"/>
-		<line class="st0" x1="3.5" y1="12" x2="5.1" y2="12"/>
-	</g>
-	<g>
-		<line class="st0" x1="16.9" y1="16.9" x2="18" y2="18"/>
-		<line class="st0" x1="6" y1="6" x2="7.1" y2="7.1"/>
-	</g>
+	<line class="st0" x1="19.3059" y1="12" x2="21" y2="12"/>
+	<line class="st0" x1="3" y1="12" x2="4.6941" y2="12"/>
+</g>
+<circle class="st0" cx="12" cy="12" r="4.125"/>
+<g>
+	<line class="st0" x1="6.8339" y1="17.1661" x2="5.636" y2="18.364"/>
+	<line class="st0" x1="18.364" y1="5.636" x2="17.1661" y2="6.8339"/>
+</g>
+<g>
+	<line class="st0" x1="17.1661" y1="17.1661" x2="18.364" y2="18.364"/>
+	<line class="st0" x1="5.636" y1="5.636" x2="6.8339" y2="6.8339"/>
+</g>
+<g>
+	<line class="st0" x1="12" y1="19.3059" x2="12" y2="21"/>
+	<line class="st0" x1="12" y1="3" x2="12" y2="4.6941"/>
 </g>
 </svg>

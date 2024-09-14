@@ -1,9 +1,16 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path d="M5.40942 15.1838C5.37442 14.9058 5.35645 14.6228 5.35645 14.3358V9.65082C5.35645 5.98182 8.33042 3.00781 12.0004 3.00781C15.6694 3.00781 18.6444 5.98182 18.6444 9.65082V14.3358C18.6444 14.7258 18.6104 15.1078 18.5464 15.4788C18.3554 16.4018 18.0644 17.2148 17.6384 17.8808C17.3444 18.3498 16.9935 18.7808 16.5955 19.1608" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.4272 20.8548C12.9682 20.9558 12.4903 21.0088 12.0013 21.0088C9.62328 21.0088 7.53726 19.7608 6.36426 17.8828" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.56348 13.8805C8.56348 15.7775 10.1015 17.3155 11.9995 17.3155C13.8975 17.3155 15.4355 15.7775 15.4355 13.8805V10.1435C15.4355 9.24349 15.0895 8.4255 14.5245 7.8125" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.9995 6.70312C10.1025 6.70312 8.56348 8.24111 8.56348 10.1391V11.0771" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.9971 13.9789V10.0469" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M5.4094,15.1838c-0.035-0.278-0.053-0.561-0.053-0.848v-4.685c0-3.669,2.974-6.643,6.6439-6.643
+		c3.669,0,6.644,2.974,6.644,6.643v4.685c0,0.39-0.034,0.772-0.098,1.143c-0.191,0.923-0.482,1.736-0.908,2.402
+		c-0.294,0.469-0.6449,0.9-1.0429,1.28"/>
+	<path class="st0" d="M13.4272,20.8548c-0.459,0.101-0.9369,0.154-1.4259,0.154c-2.378,0-4.464-1.248-5.637-3.126"/>
+	<path class="st0" d="M8.5635,13.8805c0,1.897,1.538,3.435,3.436,3.435s3.436-1.538,3.436-3.435v-3.737
+		c0-0.9-0.346-1.718-0.911-2.331"/>
+	<path class="st0" d="M11.9995,6.7031c-1.897,0-3.436,1.538-3.436,3.436v0.938"/>
+	<path class="st0" d="M11.9971,13.9789v-3.932"/>
 </g>
 </svg>

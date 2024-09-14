@@ -8,7 +8,9 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
   const fileNames = require("./file-getter.js")();
 
   const isOk = require("./cleanup.js").cleanupWithConsole(fileNames);
-  if (!isOk) return;
+  if (!isOk) {
+    process.exit(1);
+  }
 
   const outPath = "../projects/icons/src/lib/";
   const outFilesCleared = fs.readdirSync(outPath).length;
@@ -75,4 +77,6 @@ export class ${componentName} {}
   });
 
   console.log(`${OK_STR} Finished converting ${fileNames.length} files`);
+
+  process.exit(0);
 })();

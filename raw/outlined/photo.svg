@@ -1,8 +1,14 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4758 8.64022C10.4758 9.58447 9.71044 10.3508 8.76522 10.3508C7.82098 10.3508 7.05469 9.58447 7.05469 8.64022C7.05469 7.695 7.82098 6.92969 8.76522 6.92969C9.71044 6.92969 10.4758 7.695 10.4758 8.64022Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20.9997 15.5725L17.0506 12.7057C15.588 11.6428 13.5887 11.74 12.234 12.9303L4.54004 19.8337" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.00391 15.4783C3.84216 14.7081 5.14913 13.479 6.92384 14.4349C7.83989 14.9318 8.64994 15.4492 9.09823 15.7516" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.02465V15.9725C21 18.917 19.1572 20.9942 16.2126 20.9942H7.77763C4.83306 20.9942 3 18.917 3 15.9725V8.02465C3 5.08008 4.84279 3.00391 7.77763 3.00391H16.2126C19.1572 3.00391 21 5.08008 21 8.02465Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M10.4758,8.6402c0,0.9443-0.7654,1.7106-1.7106,1.7106c-0.9442,0-1.7105-0.7663-1.7105-1.7106
+		c0-0.9452,0.7663-1.7105,1.7105-1.7105C9.7104,6.9297,10.4758,7.695,10.4758,8.6402z"/>
+	<path class="st0" d="M20.9997,15.5725l-3.9491-2.8668c-1.4626-1.0629-3.4619-0.9657-4.8166,0.2246L4.54,19.8337"/>
+	<path class="st0" d="M3.0039,15.4783c0.8382-0.7702,2.1452-1.9993,3.9199-1.0434c0.916,0.4969,1.7261,1.0143,2.1744,1.3167"/>
+	<path class="st0" d="M21,8.0246v7.9479c0,2.9445-1.8428,5.0217-4.7874,5.0217h-8.435C4.8331,20.9942,3,18.917,3,15.9725V8.0246
+		c0-2.9446,1.8428-5.0207,4.7776-5.0207h8.435C19.1572,3.0039,21,5.0801,21,8.0246z"/>
 </g>
 </svg>

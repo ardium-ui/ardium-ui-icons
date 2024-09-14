@@ -8,5 +8,16 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "build-sass": "sass ./src/styles:../../dist/icons/styles/"
+  },
+  "exports": {
+    "./core.scss": {
+      "sass": "./styles/core.scss"
+    },
+    "./core.css": {
+      "style": "./styles/core.css"
+    }
+  }
 }

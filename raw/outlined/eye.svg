@@ -1,6 +1,12 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path d="M3 12.0083C3 15.6303 7.289 19.1103 12 19.1103C16.712 19.1103 21 15.6303 21 12.0083C21 8.38626 16.674 4.90625 12 4.90625C7.327 4.90625 3 8.38626 3 12.0083Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M15.0788 12.0067C15.0788 10.3077 13.7008 8.92969 12.0018 8.92969C10.3038 8.92969 8.92578 10.3077 8.92578 12.0067C8.92578 13.7047 10.3038 15.0827 12.0018 15.0827C13.7008 15.0827 15.0788 13.7047 15.0788 12.0067Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M3,12.0083c0,3.622,4.289,7.102,9,7.102c4.712,0,9-3.48,9-7.102c0-3.622-4.326-7.102-9-7.102
+		C7.327,4.9062,3,8.3863,3,12.0083z"/>
+	<path class="st0" d="M15.0788,12.0067c0-1.699-1.378-3.077-3.077-3.077c-1.698,0-3.076,1.378-3.076,3.077
+		c0,1.698,1.378,3.076,3.076,3.076C13.7008,15.0827,15.0788,13.7047,15.0788,12.0067z"/>
 </g>
 </svg>

@@ -1,13 +1,17 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 <g>
-<path d="M14.3177 3.02223L12.0206 5.31939L9.70117 3" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.3177 20.9798L12.0206 18.6836L9.70117 21.002" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.0096 5.32031V18.6752" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20.9407 9.50868L17.8027 8.6679L18.6522 5.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.38864 18.4904L6.22942 15.3524L3.06055 14.5039" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17.7936 8.66016L6.22852 15.3381" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20.9407 14.4805L17.8027 15.3212L18.6522 18.4892" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.38864 5.5L6.22942 8.63795L3.06055 9.48646" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17.7936 15.3264L6.22852 8.64844" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path class="st0" d="M14.3177,3.0222l-2.2971,2.2972L9.7012,3"/>
+	<path class="st0" d="M14.3177,20.9798l-2.2971-2.2962L9.7012,21.002"/>
+	<path class="st0" d="M12.0096,5.3203v13.3549"/>
+	<path class="st0" d="M20.9407,9.5087l-3.138-0.8408L18.6522,5.5"/>
+	<path class="st0" d="M5.3886,18.4904l0.8408-3.138l-3.1689-0.8485"/>
+	<path class="st0" d="M17.7936,8.6602L6.2285,15.3381"/>
+	<path class="st0" d="M20.9407,14.4805l-3.138,0.8407l0.8495,3.168"/>
+	<path class="st0" d="M5.3886,5.5l0.8408,3.1379L3.0605,9.4865"/>
+	<path class="st0" d="M17.7936,15.3264L6.2285,8.6484"/>
 </g>
 </svg>
