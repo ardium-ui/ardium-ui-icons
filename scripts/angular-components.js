@@ -9,9 +9,29 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
 
   const problems = require("./find-issues.js").numberOfProblems(fileNames);
   if (problems) {
-    console.log(
-      `${ERR_STR} Found ${problems} problems in files. Cannot continue.`
-    );
+    console.log(`${ERR_STR} Found ${problems} problems in files.`);
+
+    const changedAmount = require("./cleanup.js")(fileNames);
+
+    if (changedAmount) {
+      console.log(`${OK_STR} Cleaned up ${changedAmount} files.`);
+      const remainingProblems =
+        require("./find-issues.js").numberOfProblems(fileNames);
+
+      if (remainingProblems) {
+
+        console.log(
+          `${ERR_STR} ${remainingProblems} problems remain. Cannot continue.`
+        );
+      } else {
+    console.log(`${OK_STR} No problems remain. Continuing.`);
+
+      }
+    } else {
+      console.log(
+        `${ERR_STR} Couldn't cleanup any files. ${problems} problems remain. Cannot continue.`
+      );
+    }
   } else {
     console.log(`${OK_STR} No problems found in files.`);
   }
@@ -28,16 +48,35 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
     console.log(`${OK_STR} Out directory was empty.`);
   }
 
+  fsExtra.ensureDirSync(outPath + "outlined/");
+  fsExtra.ensureDirSync(outPath + "filled/");
+
+  const exportLines = [];
   for (const { path, fileName } of fileNames) {
     let content = fs.readFileSync(path + fileName, "utf-8");
 
-    content = content.replace(/(\u000d\n)?<style.*?>(\u000d\n|.)+?<\/style>/g, "");
-    content = content.replace(/(\u000d\n|\s)*?(xmlns:xlink|xml:space)=".+?"/gi, "");
+    const implicitTypeString = path.match("filled") ? "filled" : "";
+    const typeString = implicitTypeString || "outlined";
+
+    content = content.replace(
+      /(\u000d\n)?<style.*?>(\u000d\n|.)+?<\/style>/g,
+      ""
+    );
+    content = content.replace(
+      /(\u000d\n|\s)*?(xmlns:xlink|xml:space)=".+?"/gi,
+      ""
+    );
 
     const nameWithoutExt = fileName.replace(".svg", "");
     const newFileName = fileName.replace(".svg", ".icon.ts");
-    const selector = "ard-icon-" + changeCase.kebabCase(nameWithoutExt);
-    const componentName = "ArdIcon" + changeCase.pascalCase(nameWithoutExt);
+    const selector =
+      "ard-icon-" + changeCase.kebabCase(nameWithoutExt + implicitTypeString);
+    const componentName =
+      "ArdIcon" + changeCase.pascalCase(nameWithoutExt + implicitTypeString);
+
+    exportLines.push(
+      `export * from './lib/${typeString}/${newFileName.replace(".ts", "")}';`
+    );
 
     const componentSrc = `import { Component } from '@angular/core';
 
@@ -45,14 +84,21 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
   selector: '${selector}',
   standalone: true,
   template: \`${content}\`,
+  host: {
+    class: 'ard-icon-${typeString}'
+  }
 })
 export class ${componentName} {}
 `;
 
-    fs.writeFileSync(outPath + newFileName, componentSrc, {
+    fs.writeFileSync(outPath + typeString + "/" + newFileName, componentSrc, {
       encoding: "utf-8",
     });
   }
+
+  fs.writeFileSync(outPath + "../public-api.ts", exportLines.join("\n"), {
+    encoding: "utf-8",
+  });
 
   console.log(`${OK_STR} Finished converting ${fileNames.length} files`);
 })();
