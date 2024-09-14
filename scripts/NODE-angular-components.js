@@ -7,34 +7,8 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
 
   const fileNames = require("./file-getter.js")();
 
-  const problems = require("./find-issues.js").numberOfProblems(fileNames);
-  if (problems) {
-    console.log(`${ERR_STR} Found ${problems} problems in files.`);
-
-    const changedAmount = require("./cleanup.js")(fileNames);
-
-    if (changedAmount) {
-      console.log(`${OK_STR} Cleaned up ${changedAmount} files.`);
-      const remainingProblems =
-        require("./find-issues.js").numberOfProblems(fileNames);
-
-      if (remainingProblems) {
-
-        console.log(
-          `${ERR_STR} ${remainingProblems} problems remain. Cannot continue.`
-        );
-      } else {
-    console.log(`${OK_STR} No problems remain. Continuing.`);
-
-      }
-    } else {
-      console.log(
-        `${ERR_STR} Couldn't cleanup any files. ${problems} problems remain. Cannot continue.`
-      );
-    }
-  } else {
-    console.log(`${OK_STR} No problems found in files.`);
-  }
+  const isOk = require("./cleanup.js").cleanupWithConsole(fileNames);
+  if (!isOk) return;
 
   const outPath = "../projects/icons/src/lib/";
   const outFilesCleared = fs.readdirSync(outPath).length;

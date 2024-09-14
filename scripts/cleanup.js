@@ -1,7 +1,7 @@
 const fs = require("fs");
+const { OK_STR, ERR_STR } = require("./ansis.js");
 
-module.exports = function (fileNames) {
-
+const performCleanup = function (fileNames) {
   let changedAmount = 0;
   for (const { path, fileName } of fileNames) {
     let content = fs.readFileSync(path + fileName, "utf-8");
@@ -35,6 +35,13 @@ module.exports = function (fileNames) {
     if (foundNewlines) {
       content = content.replace(/\u000d\n(\u000d\n)+/g, "");
     }
+
+    const foundNonBlacks = content.match(/#[0-9a-f]{6}/g);
+    if (foundNonBlacks) {
+      content = content.replace(/#[0-9a-f]{6}/g, "#000000");
+    }
+
+    // write to file
     if (startContent !== content) {
       fs.writeFileSync(path + fileName, content, { encoding: "utf-8" });
       changedAmount++;
@@ -42,4 +49,37 @@ module.exports = function (fileNames) {
   }
 
   return changedAmount;
+};
+
+module.exports = {
+  performCleanup,
+  cleanupWithConsole: function (fileNames) {
+    const problems = require("./find-issues.js").numberOfProblems(fileNames);
+
+    if (!problems) {
+      console.log(`${OK_STR} No problems found in files.`);
+      return true;
+    }
+
+    console.log(`${OK_STR} Found ${problems} problems.`);
+    const changedAmount = performCleanup(fileNames);
+
+    if (!changedAmount) {
+      console.log(
+        `${ERR_STR} Couldn't cleanup any files. ${problems} problems remain.`
+      );
+      return false;
+    }
+
+    console.log(`${OK_STR} Cleaned up ${changedAmount} files.`);
+    const remainingProblems =
+      require("./find-issues.js").numberOfProblems(fileNames);
+
+    if (remainingProblems) {
+      console.log(`${ERR_STR} ${remainingProblems} problems remain.`);
+      return false;
+    }
+    console.log(`${OK_STR} No problems remain.`);
+    return true;
+  },
 };

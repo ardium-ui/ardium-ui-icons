@@ -1,7 +1,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#101013;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 </style>
 <path class="st0" d="M7,8c0-2.761,2.239-5,5-5s5,2.239,5,5c0,0.444-0.086,0.912-0.227,1.365c-0.263,0.847-0.753,1.606-1.346,2.266
 	L7,21h10"/>

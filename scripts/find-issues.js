@@ -10,11 +10,17 @@ const findProblems = function (fileNames) {
   const displayNones = {};
   const st1s = {};
   const images = {};
+  const nonBlacks = {};
+  const noSt0s = {};
   for (const { path, fileName } of fileNames) {
     const content = fs.readFileSync(path + fileName, "utf-8");
 
     if (fileName.match(/^[A-Z]/) && !fileName.match(/TEMPLATE/)) {
       oldFileNames[fileName] = [fileName];
+    }
+
+    if (!content.match('.st0')) {
+      noSt0s[fileName] = [fileName];
     }
 
     const foundComments = content.match(/<!--.+?-->/gs);
@@ -69,9 +75,15 @@ const findProblems = function (fileNames) {
     if (foundImages?.length) {
       images[fileName] = foundImages;
     }
+
+    const foundNonBlacks = content.match(/#[0-9a-f]{6}/g)?.filter(v => v !== '#000000');
+    if (foundNonBlacks?.length) {
+      nonBlacks[fileName] = foundNonBlacks;
+    }
   }
   return {
     oldFileNames,
+    noSt0s,
     comments,
     titles,
     ids,
@@ -80,6 +92,7 @@ const findProblems = function (fileNames) {
     displayNones,
     st1s,
     images,
+    nonBlacks,
   };
 };
 
