@@ -1,7 +1,10 @@
 const fs = require("fs");
 
-const path = "../raw/";
-const fileNames = fs.readdirSync(path).filter((name) => name.endsWith(".svg"));
+const pathRounded = "../raw/rounded";
+const pathFilled = "../raw/rounded";
+const fileNames = [fs.readdirSync(pathRounded), fs.readdirSync(pathFilled)]
+  .flat()
+  .filter((name) => name.endsWith(".svg"));
 
 let changedAmount = 0;
 for (const fileName of fileNames) {
@@ -21,7 +24,7 @@ for (const fileName of fileNames) {
   const foundSt1s = content.match(/\.st[1-9]/g);
   if (foundSt1s) {
     content = content.replace(/\s*\.st[1-9]\{.+?\}\s*/g, "");
-    content = content.replace(/class="st[1-9]"/g, "class=\"st0\"");
+    content = content.replace(/class="st[1-9]"/g, 'class="st0"');
   }
 
   const foundImages = content.match(/<image/g);
@@ -37,14 +40,15 @@ for (const fileName of fileNames) {
     content = content.replace(/\u000d\n(\u000d\n)+/g, "");
   }
   if (startContent !== content) {
-
     fs.writeFileSync(path + fileName, content, { encoding: "utf-8" });
-    changedAmount++; 
+    changedAmount++;
   }
 }
 
 if (changedAmount) {
-  console.log(`Finished cleaning up ${fileNames.length} files (changed ${changedAmount})`);
+  console.log(
+    `Finished cleaning up ${fileNames.length} files (changed ${changedAmount})`
+  );
 } else {
-  console.log('All files were clean. Nothing to do.');
+  console.log("All files were clean. Nothing to do.");
 }

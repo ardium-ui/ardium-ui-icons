@@ -1,0 +1,8 @@
+{
+  "name": "scripts",
+  "dependencies": {
+    "ansis": "^3.3.2",
+    "change-case": "^5.4.4",
+    "fs-extra": "^11.2.0"
+  }
+}
