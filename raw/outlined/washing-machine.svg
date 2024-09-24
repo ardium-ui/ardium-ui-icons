@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}</style>
+<path class="st0" d="M15.75,21h-7.5c-2.5,0-4.5-2-4.5-4.5v-9c0-2.5,2-4.5,4.5-4.5h7.5c2.5,0,4.5,2,4.5,4.5v9
+	C20.25,19,18.25,21,15.75,21z"/>
+<line class="st0" x1="20.25" y1="8.5" x2="3.75" y2="8.5"/>
+<line class="st0" x1="9.2026" y1="5.75" x2="7.2026" y2="5.75"/>
+<circle class="st0" cx="13.75" cy="5.75" r="0.125"/>
+<circle class="st0" cx="16.5" cy="5.75" r="0.125"/>
+<circle class="st0" cx="12" cy="14.75" r="3.25"/>
+<path class="st0" d="M15,14.6136c-0.5455,0.5455-1.0909,0.6818-1.7727,0.6818c-1.0909,0-1.5-1.0909-2.5909-1.0909
+	c-0.4091,0-0.9545,0-1.6364,0.5455"/>
+</svg>
