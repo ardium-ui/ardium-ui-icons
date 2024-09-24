@@ -2,6 +2,9 @@ const fs = require("fs");
 const fsExtra = require("fs-extra");
 const { OK_STR, ERR_STR } = require("./ansis.js");
 
+const outPath = "../projects/icons/src/lib/";
+const publicApiPath = outPath + "../public-api.ts";
+
 (async () => {
   const changeCase = await import("change-case");
 
@@ -12,9 +15,9 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
     process.exit(1);
   }
 
-  const outPath = "../projects/icons/src/lib/";
   const outFilesCleared = fs.readdirSync(outPath).length;
   fsExtra.emptyDirSync(outPath);
+  fsExtra.removeSync(publicApiPath);
 
   if (outFilesCleared) {
     console.log(
