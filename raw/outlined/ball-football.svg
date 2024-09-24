@@ -1,0 +1,33 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<circle class="st0" cx="12" cy="12" r="9"/>
+<polygon class="st0" points="12,8.5 8.3199,11.1738 9.7256,15.5 14.2744,15.5 15.6801,11.1738 "/>
+<g>
+	<line class="st0" x1="12" y1="8.5" x2="12" y2="5.7147"/>
+	<line class="st0" x1="12" y1="5.7235" x2="15.4964" y2="3.7049"/>
+	<line class="st0" x1="12" y1="5.7235" x2="8.5038" y2="3.705"/>
+</g>
+<g>
+	<line class="st0" x1="14.2744" y1="15.5" x2="15.4127" y2="17.2781"/>
+	<line class="st0" x1="15.4079" y1="17.2707" x2="13.5678" y2="20.8642"/>
+	<line class="st0" x1="15.4079" y1="17.2707" x2="19.4399" y2="17.0675"/>
+</g>
+<g>
+	<line class="st0" x1="9.7294" y1="15.5" x2="8.5911" y2="17.2781"/>
+	<line class="st0" x1="8.5959" y1="17.2707" x2="10.436" y2="20.8642"/>
+	<line class="st0" x1="8.5959" y1="17.2707" x2="4.564" y2="17.0675"/>
+</g>
+<g>
+	<line class="st0" x1="15.6801" y1="11.1738" x2="18.1372" y2="10.6437"/>
+	<line class="st0" x1="18.1286" y1="10.6456" x2="20.8541" y2="13.624"/>
+	<line class="st0" x1="18.1286" y1="10.6456" x2="19.3452" y2="6.7962"/>
+</g>
+<g>
+	<line class="st0" x1="8.3199" y1="11.202" x2="5.8628" y2="10.6719"/>
+	<line class="st0" x1="5.8714" y1="10.6738" x2="3.1459" y2="13.6523"/>
+	<line class="st0" x1="5.8714" y1="10.6738" x2="4.6548" y2="6.8244"/>
+</g>
+</svg>
