@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<path class="st0" d="M12,15.5V21"/>
+	<path class="st0" d="M12,3v5.5"/>
+	<polyline class="st0" points="14.0156,19.8363 12.0156,18.6816 10,19.8453 	"/>
+	<polyline class="st0" points="9.9922,4.1647 11.9922,5.3194 14.0078,4.1557 	"/>
+</g>
+<g>
+	<path class="st0" d="M15.03,13.7525l4.7643,2.7507"/>
+	<path class="st0" d="M4.2058,7.5031l4.7616,2.7491"/>
+	<polyline class="st0" points="19.7942,14.1757 17.7942,15.3304 17.7942,17.6578 	"/>
+	<polyline class="st0" points="4.2106,9.8243 6.2105,8.6696 6.2105,6.3422 	"/>
+</g>
+<g>
+	<path class="st0" d="M15.0333,10.2532l4.7625-2.7496"/>
+	<path class="st0" d="M4.2073,16.5036l4.7633-2.7501"/>
+	<polyline class="st0" points="17.7801,6.34 17.7801,8.6493 19.7957,9.813 	"/>
+	<polyline class="st0" points="6.2199,17.66 6.2199,15.3507 4.2043,14.187 	"/>
+</g>
+<polygon class="st0" points="12,8.5 14.25,8.1029 15.0311,10.25 16.5,12 15.0311,13.75 14.25,15.8971 12,15.5 9.75,15.8971 
+	8.9689,13.75 7.5,12 8.9689,10.25 9.75,8.1029 "/>
+</svg>
