@@ -15,17 +15,18 @@ const publicApiPath = outPath + "../public-api.ts";
     process.exit(1);
   }
 
-  const outFilesCleared = fs.readdirSync(outPath).length;
-  fsExtra.emptyDirSync(outPath);
+  fsExtra.ensureDirSync(outPath);
+  // const outFilesCleared = fs.readdirSync(outPath, { recursive: true }).length;
+  // fsExtra.emptyDirSync(outPath);
   fsExtra.removeSync(publicApiPath);
 
-  if (outFilesCleared) {
-    console.log(
-      `${OK_STR} Cleared ${outFilesCleared} files from out directory.`
-    );
-  } else {
-    console.log(`${OK_STR} Out directory was empty.`);
-  }
+  // if (outFilesCleared) {
+  //   console.log(
+  //     `${OK_STR} Cleared ${outFilesCleared} files from out directory.`
+  //   );
+  // } else {
+  //   console.log(`${OK_STR} Out directory was empty.`);
+  // }
 
   fsExtra.ensureDirSync(outPath + "outlined/");
   fsExtra.ensureDirSync(outPath + "filled/");

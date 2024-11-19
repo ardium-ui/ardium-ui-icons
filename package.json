@@ -10,7 +10,9 @@
     "find-issues": "cd scripts && node NODE-finder.js",
     "cleanup-icons": "cd scripts && node NODE-cleanuper.js",
     "verion-icons": "cd projects/icons && npm version",
-    "build-publish": "rmdir /s /Q dist & cd scripts && node NODE-angular-components.js && cd ../projects/icons && ng build --configuration=production && npm run build-sass && cd ../../scripts && node NODE-copy-scss.js && cd ../dist/icons && npm publish && cd ../../"
+    "to-angular": "rmdir /s /Q dist & cd scripts && node NODE-angular-components.js && cd ../projects/icons",
+    "build-icons": "npm run to-angular && ng build --configuration=production && npm run build-sass && cd ../../scripts && node NODE-copy-scss.js",
+    "build-publish": "npm run build-icons && cd dist/icons && npm publish && cd ../../"
   },
   "private": true,
   "dependencies": {
