@@ -2,15 +2,15 @@
   "name": "@ardium-ui/icons",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": ">=17.1.0",
-    "@angular/core": ">=17.1.0"
+    "@angular/common": "^17.1.0",
+    "@angular/core": "^17.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
   "scripts": {
-    "build-sass": "sass ./src/styles:../../dist/icons/styles/"
+    "build-sass": "sass ./src/styles/core.scss:../../dist/icons/styles/"
   },
   "exports": {
     "./core.scss": {
