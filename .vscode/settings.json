@@ -20,7 +20,7 @@
         {
           "name": "compile-icons",
           "commands": [
-            ""
+            "npm run cleanup-icons"
           ]
         }
       ]
