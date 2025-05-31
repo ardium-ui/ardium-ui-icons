@@ -10,6 +10,7 @@
     "test": "ng test",
     "find-issues": "cd scripts && node NODE-finder.js",
     "cleanup-icons": "cd scripts && node NODE-cleanuper.js",
+    "copy-icons": "cd scripts && node NODE-copy-to-homepage.js",
     "verion-icons": "cd projects/icons && npm version",
     "to-angular": "rmdir /s /Q projects/icons/src/lib & cd scripts && node NODE-angular-components.js && cd ../projects/icons",
     "build-icons": "npm run to-angular && ng build --configuration=production && npm run build-sass && cd ../../scripts && node NODE-copy-scss.js",
