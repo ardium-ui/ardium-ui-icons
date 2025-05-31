@@ -1,27 +1,29 @@
+@use '../../../node_modules/@ardium-ui/ui/themes/default/core.scss';
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500&display=swap");
 
 :root {
   --header-height: 4rem;
+  --box-shadow: 2px 0 6px 2px rgba(0, 0, 0, 0.25);
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-* {
   margin: 0;
   padding: 0;
 }
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   position: relative;
   font-family: 'Inter', sans-serif;
-  background-color: var(--ard-bg-darker);
+  height: 100%;
 }
 img,
 picture,
@@ -63,13 +65,4 @@ a {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

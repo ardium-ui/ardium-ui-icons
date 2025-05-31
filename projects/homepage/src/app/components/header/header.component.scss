@@ -1,16 +1,24 @@
-header {
-  box-shadow: 2px 0 6px 2px rgba(0, 0, 0, 0.3);
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+:host {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
   height: 100%;
+
+  > * {
+    padding: 0 1rem;
+  }
 }
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8ch;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
+  z-index: 1;
+  background-color: var(--ard-bg-darker);
+}
+.search-container {
+  box-shadow: var(--box-shadow);
+  background-color: var(--ard-bg);
+  border-left: 1px solid var(--ard-detail-ultralight);
 }

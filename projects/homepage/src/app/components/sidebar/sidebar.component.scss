@@ -1,0 +1,18 @@
+:host {
+  background-color: var(--ard-bg-darker);
+  box-shadow: var(--box-shadow);
+  border-top: 1px solid var(--ard-detail-ultralight);
+}
+.sidebar-section {
+  padding: 1rem;
+
+  &:not(:first-child) {
+    border-top: 1px solid var(--ard-detail-ultralight);
+  }
+}
+.sidebar-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 60%;
+}
