@@ -12,6 +12,8 @@ const findProblems = function (fileNames) {
   const images = {};
   const nonBlacks = {};
   const noSt0s = {};
+  const wrongSizes = {};
+
   for (const { path, fileName } of fileNames) {
     const content = fs.readFileSync(path + fileName, "utf-8");
 
@@ -80,6 +82,11 @@ const findProblems = function (fileNames) {
     if (foundNonBlacks?.length) {
       nonBlacks[fileName] = foundNonBlacks;
     }
+
+    const foundWrongSize = content.match(/viewBox="0 0 [013-9]\d* [013-9]\d*"/);
+    if (foundWrongSize) {
+      wrongSizes[fileName] = foundWrongSize;
+    }
   }
   return {
     oldFileNames,
@@ -93,6 +100,7 @@ const findProblems = function (fileNames) {
     st1s,
     images,
     nonBlacks,
+    wrongSizes,
   };
 };
 

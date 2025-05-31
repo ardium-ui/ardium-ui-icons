@@ -1,0 +1,6 @@
+<div class="grid">
+  @for (icon of icons(); track icon.name + icon.type) {
+  <app-icon-item [iconData]="icon" />
+  }
+</div>
+<p>No more icons to show...</p>

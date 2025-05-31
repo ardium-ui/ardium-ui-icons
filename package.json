@@ -28,6 +28,7 @@
     "@angular/router": "^20.0.0",
     "@ardium-ui/devkit": "^7.5.0",
     "@ardium-ui/ui": "^3.4.4",
+    "case": "^1.6.3",
     "rxjs": "~7.8.0",
     "sass": "^1.78.0",
     "simple-bool": "^3.0.1",

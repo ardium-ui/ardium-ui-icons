@@ -8,10 +8,16 @@
       "strict": true,
       "noImplicitOverride": true,
       "paths": {
-        "@ardium-ui/icons": [
-          "projects/icons/src/public-api",
-          "dist/icons"
-        ]
+        "@ardium-ui/icons": ["projects/icons/src/public-api", "dist/icons"],
+        
+        "@env": ["projects/homepage/src/environemnts/environment"],
+        "@components/*": ["projects/homepage/src/app/components/*"],
+        "@services/*": ["projects/homepage/src/app/services/*"],
+        "@pipes/*": ["projects/homepage/src/app/pipes/*"],
+        "@directives/*": ["projects/homepage/src/app/directives/*"],
+        "@guards/*": ["projects/homepage/src/app/guards/*"],
+        "@interceptors/*": ["projects/homepage/src/app/interceptors/*"],
+        "@shared/*": ["projects/homepage/shared-dist/*"]
       },
       "noPropertyAccessFromIndexSignature": true,
       "noImplicitReturns": true,
@@ -25,10 +31,7 @@
       "target": "ES2022",
       "module": "ES2022",
       "useDefineForClassFields": false,
-      "lib": [
-        "ES2022",
-        "dom"
-      ]
+      "lib": ["ES2022", "dom"]
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
