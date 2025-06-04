@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border-bottom: var(--border);
+  background-color: var(--ard-bg);
+
+  > * {
+    padding: 0 1rem;
+  }
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8ch;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  z-index: 1;
+}

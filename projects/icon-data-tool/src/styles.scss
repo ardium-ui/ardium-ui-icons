@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@use "../../../node_modules/@ardium-ui/ui/themes/default/core.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/buttons/button.scss";
+
+:root {
+  --header-height: 4rem;
+  --border: 1px solid var(--ard-detail-ultralight);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h2 {
+  font-size: 1.125rem;
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+button,
+a {
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
