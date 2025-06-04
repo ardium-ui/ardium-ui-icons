@@ -1,0 +1,9 @@
+<cdk-virtual-scroll-viewport itemSize="64" minBufferPx="500" maxBufferPx="800">
+  <ng-container *cdkVirtualFor="let icon of icons(); let index = index">
+    <app-icon-item
+      [iconData]="icon"
+      (changeCategory)="changeCategory.emit({ index: index, value: $event })"
+      (changeTags)="changeTags.emit({ index: index, value: $event })"
+    />
+  </ng-container>
+</cdk-virtual-scroll-viewport>

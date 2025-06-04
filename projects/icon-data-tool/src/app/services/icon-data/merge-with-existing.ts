@@ -5,25 +5,32 @@ export function mergeIconDataWithExisting(
   allIconsData: Record<IconType, string[]>,
   existingIconData: any[]
 ): PartialIconData[] {
-  return Object.entries(allIconsData).flatMap(([type, names]) => {
-    return names.map((name) => {
-      const existingIcon = existingIconData.find(
-        (icon) => icon.name === name && icon.type === type
-      );
+  return Object.entries(allIconsData)
+    .flatMap<PartialIconData>(([type, names]) => {
+      return names.map((name) => {
+        const existingIcon = existingIconData.find(
+          (icon) => icon.name === name && icon.type === type
+        );
 
-      if (existingIcon) {
-        return {
-          ...existingIcon,
-          type: type as IconType,
-          name,
-        };
-      } else {
-        return {
-          type: type as IconType,
-          name,
-          tags: [],
-        };
-      }
-    });
-  });
+        if (existingIcon) {
+          return {
+            ...existingIcon,
+            type: type as IconType,
+            name,
+          };
+        } else {
+          return {
+            type: type as IconType,
+            name,
+            tags: [],
+          };
+        }
+      });
+    })
+    .sort(
+      (a, b) =>
+        (a.category ?? '').localeCompare(b.category ?? '') ||
+        a.name.localeCompare(b.name) ||
+        a.type.localeCompare(b.type)
+    );
 }

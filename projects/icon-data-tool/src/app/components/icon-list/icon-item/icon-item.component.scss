@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  grid-template-columns: 64px 1fr max-content max-content;
+  align-items: center;
+  height: 64px;
+  padding: 0 1rem;
+}
+img {
+  aspect-ratio: 1;
+  height: 80%;
+}

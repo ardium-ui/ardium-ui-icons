@@ -1,0 +1,5 @@
+<app-icon-list
+  [icons]="iconDataService.iconData()"
+  (changeCategory)="iconDataService.setCategory($event.index, $event.value)"
+  (changeTags)="iconDataService.setTags($event.index, $event.value)"
+/>

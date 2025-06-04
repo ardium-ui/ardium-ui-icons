@@ -11,5 +11,8 @@ main {
   padding-top: var(--header-height);
   width: 100vw;
   display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 1fr;
+}
+router-outlet {
+  display: none;
 }
