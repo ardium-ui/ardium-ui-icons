@@ -16,11 +16,8 @@ const publicApiPath = outPath + "../public-api.ts";
   }
 
   fsExtra.ensureDirSync(outPath);
-  // const outFilesCleared = fs.readdirSync(outPath, { recursive: true }).length;
-  // fsExtra.emptyDirSync(outPath);
   fsExtra.removeSync(publicApiPath);
 
-  // if (outFiack
 
   fsExtra.ensureDirSync(outPath + "outlined/");
   fsExtra.ensureDirSync(outPath + "filled/");

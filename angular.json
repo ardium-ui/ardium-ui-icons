@@ -174,7 +174,8 @@
                 "styles": [
                   "projects/homepage/src/styles.scss"
                 ],
-                "scripts": []
+                "scripts": [],
+                "webWorkerTsConfig": "projects/homepage/tsconfig.worker.json"
               },
               "configurations": {
                 "production": {
@@ -234,7 +235,8 @@
                 "styles": [
                   "projects/homepage/src/styles.scss"
                 ],
-                "scripts": []
+                "scripts": [],
+                "webWorkerTsConfig": "projects/homepage/tsconfig.worker.json"
               }
             }
           }
