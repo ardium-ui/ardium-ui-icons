@@ -38,5 +38,13 @@
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
         "strictTemplates": true
-    }
+    },
+    "references": [
+      {
+        "path": "./projects/icon-data-tool/tsconfig.app.json"
+      },
+      {
+        "path": "./projects/icon-data-tool/tsconfig.spec.json"
+      }
+    ]
 }
