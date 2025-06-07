@@ -6,6 +6,9 @@ const { OK_STR, ERR_STR } = require("./ansis.js");
 const destProject = "../projects/icon-data-tool";
 const destPath = path.join(destProject, "public/icons");
 const outFilePath = path.join(destProject, "src/app/data/icon-list.ts");
+const existingInFilePath =
+  "../projects/homepage/src/app/services/icon-storage/icon-data.ts";
+  const existingOutFilePath = path.join(destProject, "src/app/data/existing-icon-data.ts");
 
 fsExtra.ensureDirSync(destPath);
 
@@ -51,4 +54,11 @@ try {
   fs.writeFileSync(outFilePath, outFileContent);
 } catch (error) {
   console.log(`${ERR_STR} Error reading icon folders:`, error);
+}
+
+try {
+  fs.cpSync(existingInFilePath, existingOutFilePath);
+  console.log(`${OK_STR} Copied icon-data.ts file`);
+} catch (error) {
+  console.log(`${ERR_STR} Error copying icon-data.ts file:`, error);
 }

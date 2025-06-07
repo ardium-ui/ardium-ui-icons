@@ -1,7 +1,33 @@
-<img [src]="iconSrc()" [alt]="iconData().name" />
-<div class="name-container">
-  <div class="name">{{ iconData().name | iconDisplayName }}</div>
-  <div class="additional-info">{{ iconData().type }} • {{ iconData().name }}.svg</div>
+<div class="images">
+  <img [src]="iconSrc()" [alt]="iconData().name" />
+  <img [src]="iconSrc()" [alt]="iconData().name" />
 </div>
-<div class="category">Category here...</div>
-<div class="tags">Tags here...</div>
+<div class="name-container">
+  <div class="name" [cdkCopyToClipboard]="iconData().name | iconDisplayName">
+    {{ iconData().name | iconDisplayName }}
+  </div>
+  <div class="additional-info">
+    <span>{{ iconData().type }}</span> •
+    <span [cdkCopyToClipboard]="iconData().name">
+      {{ iconData().name }}.svg
+    </span>
+  </div>
+</div>
+<div class="category">
+  <ard-select
+    [items]="ALL_CATEGORIES"
+    (valueChange)="onCategoryChange($event)"
+    [value]="iconData().category ?? null"
+    placeholder="Category"
+  />
+</div>
+<div class="tags">
+  <ard-select
+    [items]="ALL_TAGS()"
+    (valueChange)="onTagsChange($event)"
+    [value]="iconData().tags"
+    placeholder="Tags"
+    multiselectable
+    addCustom
+  />
+</div>

@@ -1,5 +1,11 @@
 @use "../../../node_modules/@ardium-ui/ui/themes/default/core.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/buttons/button.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/form-field-frame.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/select.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/dropdown-panel.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/chips.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 :root {
   --header-height: 4rem;
@@ -24,6 +30,9 @@ body {
   position: relative;
   font-family: 'Inter', sans-serif;
   height: 100%;
+  //TODO remove
+  background: #555;
+  --ard-bg: #555;
 }
 img,
 picture,
@@ -65,4 +74,21 @@ a {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+// overrides
+.ard-chip-wrapper .ard-clear-btn-wrapper .ard-clear-btn::before {
+  content: "✕";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60%;
+  position: relative;
+  bottom: 1px;
+}
+.ard-chip-wrapper.ard-chip-align-left.ard-chip-deletable .ard-chip-content-wrapper {
+  padding-right: 2px;
+}
+.ard-chip-wrapper {
+  flex-direction: row-reverse !important;
+  padding-left: 0 !important;
+  padding-right: 4px !important;
 }
