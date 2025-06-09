@@ -10,6 +10,11 @@
     padding: 0 1rem;
   }
 }
+.left-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .logo-container {
   display: flex;
   align-items: center;
@@ -18,4 +23,13 @@
   font-weight: 500;
   font-size: 1.125rem;
   z-index: 1;
+}
+.selected-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
 }

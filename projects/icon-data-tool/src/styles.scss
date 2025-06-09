@@ -1,5 +1,6 @@
 @use "../../../node_modules/@ardium-ui/ui/themes/default/core.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/buttons/button.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/buttons/icon-button.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/form-field-frame.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/select.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/dropdown-panel.scss";
@@ -32,8 +33,8 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100%;
   //TODO remove
-  background: #555;
-  --ard-bg: #555;
+  background: #999;
+  --ard-bg: #999;
 }
 img,
 picture,
@@ -92,4 +93,8 @@ table {
   flex-direction: row-reverse !important;
   padding-left: 0 !important;
   padding-right: 4px !important;
+}
+.ard-button .ard-button-content:has(ard-icon) {
+  margin-left: -0.25rem;
+  gap: 0.625rem;
 }
