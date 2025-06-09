@@ -78,7 +78,7 @@ const findProblems = function (fileNames) {
       images[fileName] = foundImages;
     }
 
-    const foundNonBlacks = content.match(/#[0-9a-f]{6}/g)?.filter(v => v !== '#000000');
+    const foundNonBlacks = content.match(/#[0-9a-f]{6}/gi)?.filter(v => v !== '#000000');
     if (foundNonBlacks?.length) {
       nonBlacks[fileName] = foundNonBlacks;
     }
