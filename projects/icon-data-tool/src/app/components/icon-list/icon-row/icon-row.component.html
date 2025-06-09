@@ -1,0 +1,9 @@
+@for (iconAndSelected of icons(); track iconAndSelected.selected +
+iconAndSelected.icon.type + iconAndSelected.icon.name) {
+<app-icon-item
+  [iconData]="iconAndSelected.icon"
+  [checkboxSelected]="iconAndSelected.selected"
+  (checkboxSelectedChange)="onItemCheckboxChange($event, $index)"
+  (itemClick)="onItemClick($event, $index)"
+/>
+}

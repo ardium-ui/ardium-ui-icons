@@ -1,0 +1,5 @@
+<ard-checkbox [(selected)]="checkboxSelected" (click)="onCheckboxClick($event)" />
+<img [src]="iconSrc()" [alt]="iconData().name" />
+<div class="name" [cdkCopyToClipboard]="iconData().name | iconDisplayName">
+  {{ iconData().name | iconDisplayName }}
+</div>

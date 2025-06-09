@@ -29,7 +29,7 @@
     "@angular/platform-browser": "^20.0.0",
     "@angular/platform-browser-dynamic": "^20.0.0",
     "@angular/router": "^20.0.0",
-    "@ardium-ui/devkit": "^7.6.1",
+    "@ardium-ui/devkit": "^7.7.0",
     "@ardium-ui/ui": "^3.4.4",
     "case": "^1.6.3",
     "change-case": "^5.4.4",
