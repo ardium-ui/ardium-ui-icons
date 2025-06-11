@@ -1,0 +1,13 @@
+<ard-dialog
+  heading="Pick a category to apply to all items"
+  confirmButtonText="Apply"
+  confirmButtonAppearance="raised-strong"
+  rejectButtonAppearance="raised"
+  [open]="modalController.openModalType() === OpenModalType.Category"
+  (reject)="modalController.closeModal()"
+  (confirm)="emitResult()"
+  [canConfirm]="!!category()"
+  disableBackdropClose
+>
+  <ard-select placeholder="Category..." [items]="categoryList.toArray()" (valueChange)="saveCategory($event)" />
+</ard-dialog>

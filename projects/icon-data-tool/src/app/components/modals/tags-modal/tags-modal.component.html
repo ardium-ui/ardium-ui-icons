@@ -1,0 +1,34 @@
+<ard-dialog
+  heading="Manage tags to apply to all items"
+  confirmButtonText="Apply"
+  confirmButtonAppearance="raised-strong"
+  rejectButtonAppearance="raised"
+  [open]="modalController.openModalType() === OpenModalType.Tags"
+  (reject)="modalController.closeModal()"
+  (confirm)="emitResult()"
+  disableBackdropClose
+>
+  <h3>Common tags</h3>
+  <div class="tag-list">
+    @if (originalCommonTagsToDisplay().length === 0 && addedTags.size() === 0) {
+    No common tags to display } @else { @for (tag of originalCommonTagsToDisplay();
+    track tag) {
+    <ard-deletable-chip color="none" (delete)="removeOriginalTag(tag)">
+      {{ tag }}
+    </ard-deletable-chip>
+    } @for (tag of addedTags(); track tag) {
+    <ard-deletable-chip color="success" (delete)="removeAddedTag(tag)">
+      {{ tag }}
+    </ard-deletable-chip>
+    } }
+  </div>
+  <h3>Other tags</h3>
+  <div class="tag-list">
+    @for (tag of originalOtherTagsToDisplay(); track tag) {
+    <ard-deletable-chip color="none" (delete)="removeOriginalTag(tag)">
+      {{ tag }}
+    </ard-deletable-chip>
+    } @empty { No other tags to display }
+  </div>
+  <!-- <ard-select placeholder="Category..." [items]="tagList.toArray()" (valueChange)="saveCategory($event)" /> -->
+</ard-dialog>

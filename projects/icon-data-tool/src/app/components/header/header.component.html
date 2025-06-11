@@ -12,8 +12,12 @@
     {{ iconDataService.selectedIconIndexes.size() | number : "1.0-0" }} selected
   </div>
   <div class="buttons">
-    <ard-button><ard-icon>category</ard-icon> Set Category</ard-button>
-    <ard-button><ard-icon>sell</ard-icon> Manage Tags</ard-button>
+    <ard-button (click)="iconDataService.openCategorySelectionModal()">
+      <ard-icon>category</ard-icon> Set Category
+    </ard-button>
+    <ard-button (click)="iconDataService.openTagsManagementModal()">
+      <ard-icon>sell</ard-icon> Manage Tags
+    </ard-button>
   </div>
   }
 </div>

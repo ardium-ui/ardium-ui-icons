@@ -13,6 +13,11 @@ import { IconCategory } from '@components/category-selector/categories';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 import { ICON_DATA as EXISTING_ICON_DATA } from '../../data/existing-icon-data';
 import { ICON_LIST } from '../../data/icon-list';
+import { groupTags } from '../../utils/group-tags';
+import {
+  ModalControllerService,
+  ModalType,
+} from '../modal-controller/modal-controller.service';
 import { mergeIconDataWithExisting } from './merge-with-existing';
 
 @Injectable({
@@ -20,6 +25,7 @@ import { mergeIconDataWithExisting } from './merge-with-existing';
 })
 export class IconDataService implements OnDestroy {
   private readonly _http = inject(HttpClient);
+  private readonly _modalController = inject(ModalControllerService);
 
   private readonly _iconData = arraySignal(
     mergeIconDataWithExisting(ICON_LIST, EXISTING_ICON_DATA)
@@ -98,6 +104,19 @@ export class IconDataService implements OnDestroy {
         tags: newTags,
       }));
     }
+  }
+
+  openCategorySelectionModal(): void {
+    this._modalController.openModal(ModalType.Category);
+  }
+  openTagsManagementModal(): void {
+    console.log(this._iconData());
+    this._modalController.openModal(
+      ModalType.Tags,
+      groupTags(
+        this._iconData().filter((_, i) => this.selectedIconIndexes().has(i))
+      )
+    );
   }
 
   //! determining number of icons per row

@@ -26,6 +26,11 @@ export class RecentlyAccessedList<T> implements Iterable<T> {
 
   has(item: T): boolean {
     const index = this._items.indexOf(item);
+    return index !== -1;
+  }
+
+  touch(item: T): boolean {
+    const index = this._items.indexOf(item);
     if (index !== -1) {
       this._items.splice(index, 1);
       this._items.unshift(item);
