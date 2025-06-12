@@ -11,13 +11,21 @@
   <h3>Common tags</h3>
   <div class="tag-list">
     @if (originalCommonTagsToDisplay().length === 0 && addedTags.size() === 0) {
-    No common tags to display } @else { @for (tag of originalCommonTagsToDisplay();
-    track tag) {
-    <ard-deletable-chip color="none" (delete)="removeOriginalTag(tag)">
+    No common tags to display } @else { @for (tag of
+    originalCommonTagsToDisplay(); track tag) {
+    <ard-deletable-chip
+      appearance="outlined-strong"
+      color="none"
+      (delete)="removeOriginalTag(tag)"
+    >
       {{ tag }}
     </ard-deletable-chip>
     } @for (tag of addedTags(); track tag) {
-    <ard-deletable-chip color="success" (delete)="removeAddedTag(tag)">
+    <ard-deletable-chip
+      appearance="outlined-strong"
+      color="success"
+      (delete)="removeAddedTag(tag)"
+    >
       {{ tag }}
     </ard-deletable-chip>
     } }
@@ -25,10 +33,20 @@
   <h3>Other tags</h3>
   <div class="tag-list">
     @for (tag of originalOtherTagsToDisplay(); track tag) {
-    <ard-deletable-chip color="none" (delete)="removeOriginalTag(tag)">
+    <ard-deletable-chip
+      appearance="outlined-strong"
+      color="none"
+      (delete)="removeOriginalTag(tag)"
+    >
       {{ tag }}
     </ard-deletable-chip>
     } @empty { No other tags to display }
   </div>
-  <!-- <ard-select placeholder="Category..." [items]="tagList.toArray()" (valueChange)="saveCategory($event)" /> -->
+  <ard-select
+    placeholder="Add tag..."
+    addCustom
+    [items]="tagList.toArray()"
+    (valueChange)="onTagAdd($event)"
+    [(value)]="tagSelectValue"
+  />
 </ard-dialog>

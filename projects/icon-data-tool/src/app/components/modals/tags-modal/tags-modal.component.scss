@@ -1,0 +1,13 @@
+h3 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-variant: small-caps;
+  color: var(--ard-text3);
+}
+
+.tag-list {
+  padding-bottom: 1rem;
+  display: flex;
+  max-width: 25rem;
+  flex-wrap: wrap;
+}

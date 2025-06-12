@@ -1,4 +1,4 @@
-import { Component, computed, inject, Signal } from '@angular/core';
+import { Component, computed, effect, inject, signal, Signal } from '@angular/core';
 import { setSignal } from '@ardium-ui/devkit';
 import {
   ArdiumChipModule,
@@ -33,6 +33,17 @@ export class TagsModalComponent {
     ),
   ]);
 
+  constructor() {
+    effect(() => {
+      if (this.modalController.openModalType() === ModalType.Tags) {
+        this.addedTags.clear();
+        this.removedTags.clear();
+      }
+    })
+  }
+
+  readonly tagSelectValue = signal<string | null>(null);
+
   readonly originalTags = this.modalController.openModalData as Signal<{
     common: string[];
     other: string[];
@@ -65,6 +76,12 @@ export class TagsModalComponent {
     })),
   ]);
 
+  onTagAdd(value: any): void {
+    this.addTag(value);
+    setTimeout(() => {
+      this.tagSelectValue.set(null);
+    }, 0);
+  }
   addTag(tag: string): void {
     if (!this.tagList.has(tag)) {
     }

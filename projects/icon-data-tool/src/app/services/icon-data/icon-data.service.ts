@@ -110,7 +110,6 @@ export class IconDataService implements OnDestroy {
     this._modalController.openModal(ModalType.Category);
   }
   openTagsManagementModal(): void {
-    console.log(this._iconData());
     this._modalController.openModal(
       ModalType.Tags,
       groupTags(
