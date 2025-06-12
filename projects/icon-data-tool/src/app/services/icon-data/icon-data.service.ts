@@ -21,6 +21,9 @@ import {
 } from '../modal-controller/modal-controller.service';
 import { mergeIconDataWithExisting } from './merge-with-existing';
 
+
+console.log(EXISTING_ICON_DATA)
+
 @Injectable({
   providedIn: 'root',
 })
@@ -134,7 +137,7 @@ export class IconDataService implements OnDestroy {
   }
 
   //! determining number of icons per row
-  readonly ICON_SIZE: number = 120;
+  readonly ICON_SIZE: number = 132;
 
   readonly BREAKPOINTS: string[] = new Array(30)
     .fill('')
