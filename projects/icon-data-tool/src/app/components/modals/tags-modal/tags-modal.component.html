@@ -44,7 +44,8 @@
   </div>
   <ard-select
     placeholder="Add tag..."
-    addCustom
+    [addCustom]="true"
+    searchable
     [items]="tagList.toArray()"
     (valueChange)="onTagAdd($event)"
     [(value)]="tagSelectValue"

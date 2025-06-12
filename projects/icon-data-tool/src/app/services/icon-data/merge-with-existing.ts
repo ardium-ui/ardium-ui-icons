@@ -12,19 +12,13 @@ export function mergeIconDataWithExisting(
           (icon) => icon.name === name && icon.type === type
         );
 
-        if (existingIcon) {
-          return {
-            ...existingIcon,
-            type: type as IconType,
+        return (
+          existingIcon ?? {
             name,
-          };
-        } else {
-          return {
             type: type as IconType,
-            name,
             tags: [],
-          };
-        }
+          }
+        );
       });
     })
     .sort(

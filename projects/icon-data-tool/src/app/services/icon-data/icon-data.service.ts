@@ -15,6 +15,7 @@ import { ICON_DATA as EXISTING_ICON_DATA } from '../../data/existing-icon-data';
 import { ICON_LIST } from '../../data/icon-list';
 import { groupTags } from '../../utils/group-tags';
 import {
+  ActionType,
   ModalControllerService,
   ModalType,
 } from '../modal-controller/modal-controller.service';
@@ -96,14 +97,28 @@ export class IconDataService implements OnDestroy {
         category: newCategory,
       }));
     }
+    this.unselectAll();
   }
-  setTagsForSelected(newTags: string[]) {
+  updateTagsForSelected(actions: { actionType: ActionType; tag: string }[]) {
     for (const index of this.selectedIconIndexes()) {
-      this._iconData.updateAt(index, (icon) => ({
-        ...icon,
-        tags: newTags,
-      }));
+      this._iconData.updateAt(index, (icon) => {
+        const newTags = new Set(icon.tags);
+
+        for (const action of actions) {
+          if (action.actionType === ActionType.Add) {
+            newTags.add(action.tag);
+          } else {
+            newTags.delete(action.tag);
+          }
+        }
+
+        return {
+          ...icon,
+          tags: [...newTags],
+        };
+      });
     }
+    this.unselectAll();
   }
 
   openCategorySelectionModal(): void {
@@ -158,9 +173,30 @@ export class IconDataService implements OnDestroy {
         )
         .subscribe();
 
+      console.log(this._iconData());
+
       onCleanup(() => {
         this._sub?.unsubscribe();
       });
+    });
+
+    // listen to modal submit events
+    this._modalController.modalResult$.subscribe((event) => {
+      const { type } = event;
+      switch (type) {
+        case ModalType.Category: {
+          this.setCategoryForSelected(event.value);
+          break;
+        }
+        case ModalType.Tags: {
+          this.updateTagsForSelected(event.value);
+          break;
+        }
+
+        default: {
+          throw new Error(`Unknown modal type "${type}"`);
+        }
+      }
     });
   }
 
