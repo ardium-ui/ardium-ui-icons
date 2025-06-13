@@ -5,7 +5,6 @@ import {
   ModalControllerService,
   ModalType,
 } from '../../../services/modal-controller/modal-controller.service';
-import { RecentlyAccessedList } from '../../../utils/recently-accessed-list';
 
 @Component({
   selector: 'app-category-modal',
@@ -17,16 +16,15 @@ export class CategoryModalComponent {
   readonly modalController = inject(ModalControllerService);
   readonly OpenModalType = ModalType;
 
-  readonly categoryList = new RecentlyAccessedList(
-    Object.keys(IconCategory) as (keyof typeof IconCategory)[]
-  );
+  readonly CATEGORY_LIST = Object.keys(
+    IconCategory
+  ) as (keyof typeof IconCategory)[];
 
   readonly category = signal<keyof typeof IconCategory | null>(null);
 
   saveCategory(result: any): void {
     const category = result as keyof typeof IconCategory;
     this.category.set(category);
-    // this.categoryList.touch(category);
   }
   emitResult(): void {
     const v = this.category();

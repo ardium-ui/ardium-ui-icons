@@ -11,7 +11,6 @@ import {
   ModalControllerService,
   ModalType,
 } from '../../../services/modal-controller/modal-controller.service';
-import { RecentlyAccessedList } from '../../../utils/recently-accessed-list';
 
 @Component({
   selector: 'app-tags-modal',
@@ -24,14 +23,14 @@ export class TagsModalComponent {
   readonly iconDataService = inject(IconDataService);
   readonly OpenModalType = ModalType;
 
-  readonly tagList = new RecentlyAccessedList([
+  readonly TAG_LIST = [
     ...new Set(
       this.iconDataService
         .iconData()
         .map((v) => v.tags)
         .flat()
     ),
-  ]);
+  ];
 
   constructor() {
     effect(() => {
@@ -39,7 +38,7 @@ export class TagsModalComponent {
         this.addedTags.clear();
         this.removedTags.clear();
       }
-    })
+    });
   }
 
   readonly tagSelectValue = signal<string | null>(null);
@@ -83,7 +82,7 @@ export class TagsModalComponent {
     }, 0);
   }
   addTag(tag: string): void {
-    if (!this.tagList.has(tag)) {
+    if (!this.TAG_LIST.includes(tag)) {
     }
     if (this.removedTags.has(tag)) {
       this.removedTags.delete(tag);

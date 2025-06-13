@@ -9,5 +9,5 @@
   [canConfirm]="!!category()"
   disableBackdropClose
 >
-  <ard-select placeholder="Category..." [items]="categoryList.toArray()" (valueChange)="saveCategory($event)" searchable />
+  <ard-select placeholder="Category..." [items]="CATEGORY_LIST" (valueChange)="saveCategory($event)" searchable />
 </ard-dialog>
