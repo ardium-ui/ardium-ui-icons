@@ -34,7 +34,6 @@ export class IconDataPage {
   onItemClick(iconData: RowIndexAndValue<MouseEvent>): void {
     if (!this.iconDataService.isAnyIconSelected()) return;
 
-    console.log('shift', this._keyboardService.isShiftHeld());
     if (this._keyboardService.isShiftHeld()) {
       this.iconDataService.selectItemsBetweenThisAndLastSelected(
         iconData.rowIndex,

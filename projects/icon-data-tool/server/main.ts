@@ -21,6 +21,10 @@ router.post<null, { ok: boolean }, PartialIconData[]>(
     const items = req.body;
     const filtered = items.filter((v) => v.category) as IconData[];
 
+    filtered.sort(
+      (a, b) => a.name.localeCompare(b.name) || a.type.localeCompare(b.type)
+    );
+
     fs.writeFileSync(
       DATA_FILE_PATH,
       `import { IconCategory } from '@components/category-selector/categories';

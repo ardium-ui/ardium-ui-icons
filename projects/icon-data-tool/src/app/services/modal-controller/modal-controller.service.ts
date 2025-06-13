@@ -41,6 +41,4 @@ export class ModalControllerService {
   }
 
   readonly modalResult$ = new Subject<ModalResult>();
-
-  fdjfnd = this.modalResult$.subscribe(v => console.log(v))
 }

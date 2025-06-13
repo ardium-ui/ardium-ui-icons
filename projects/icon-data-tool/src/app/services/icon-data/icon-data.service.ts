@@ -21,9 +21,6 @@ import {
 } from '../modal-controller/modal-controller.service';
 import { mergeIconDataWithExisting } from './merge-with-existing';
 
-
-console.log(EXISTING_ICON_DATA)
-
 @Injectable({
   providedIn: 'root',
 })
@@ -67,7 +64,6 @@ export class IconDataService implements OnDestroy {
   ): void {
     const currentIndex = this.iconsPerRow() * rowIndex + itemIndex;
     const lastSelectedIndex = this._lastSelectedIndex() ?? currentIndex;
-    console.log(currentIndex, lastSelectedIndex);
 
     const startIndex = Math.min(currentIndex, lastSelectedIndex);
     const endIndex = Math.max(currentIndex, lastSelectedIndex);
@@ -167,8 +163,6 @@ export class IconDataService implements OnDestroy {
           this._iconData()
         )
         .subscribe();
-
-      console.log(this._iconData());
 
       onCleanup(() => {
         this._sub?.unsubscribe();
