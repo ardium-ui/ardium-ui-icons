@@ -26,6 +26,7 @@ export class CategoryModalComponent {
   saveCategory(result: any): void {
     const category = result as keyof typeof IconCategory;
     this.category.set(category);
+    // this.categoryList.touch(category);
   }
   emitResult(): void {
     const v = this.category();

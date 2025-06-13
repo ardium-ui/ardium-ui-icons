@@ -36,14 +36,6 @@ export class IconDataService implements OnDestroy {
   );
   public readonly iconData = this._iconData.asReadonly();
 
-  readonly allTags = computed<string[]>(() => [
-    ...new Set(
-      this._iconData()
-        .map((v) => v.tags)
-        .flat()
-    ),
-  ]);
-
   private readonly _selectedIconIndexes = setSignal<number>();
   public readonly selectedIconIndexes = this._selectedIconIndexes.asReadonly();
 
