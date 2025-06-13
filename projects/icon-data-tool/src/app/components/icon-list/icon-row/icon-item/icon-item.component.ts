@@ -12,6 +12,9 @@ import { IconDisplayNamePipe } from './../../../../../../../homepage/src/app/pip
   imports: [IconDisplayNamePipe, CommonModule, ClipboardModule, ArdiumCheckboxModule, ArdiumIconModule],
   templateUrl: './icon-item.component.html',
   styleUrl: './icon-item.component.scss',
+  host: {
+    '[class.selected]': 'checkboxSelected()'
+  }
 })
 export class IconItemComponent {
   readonly ALL_CATEGORIES = Object.values(IconCategory);

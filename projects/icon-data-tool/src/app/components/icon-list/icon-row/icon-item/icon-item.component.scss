@@ -12,6 +12,12 @@ $margin: 0.25rem;
   border: 1px solid var(--ard-border);
   border-radius: 0.375rem;
   cursor: pointer;
+  user-select: none;
+
+  &.selected {
+    background-color: rgba(var(--ard-primary-500), 0.07);
+    border-color: rgb(var(--ard-primary-700))
+  }
 }
 img {
   aspect-ratio: 1;
@@ -53,6 +59,7 @@ ard-checkbox {
 
   --_chip-border: var(--ard-border);
   --_chip-bg: var(--ard-darken-overlay);
+  --_chip-color: var(--ard-text);
 
   > * {
     line-height: 1.125;
@@ -60,12 +67,101 @@ ard-checkbox {
     background-color: var(--_chip-bg);
     padding: 0 0.2rem;
     border-radius: 0.25rem;
+    color: var(--_chip-color);
   }
   .tags {
     font-weight: 600;
 
     ard-icon {
       font-size: 0.75rem;
+      position: relative;
+      top: 0.0625rem;
     }
+  }
+}
+.category {
+  // light blue
+  &.category-ai,
+  &.category-electricity {
+    --_chip-border: #0288D1;
+    --_chip-bg: #E1F5FE;
+  }
+  // lime
+  &.category-animals {
+    --_chip-border: #827717;
+    --_chip-bg: #E6EE9C;
+  }
+  // blue grey
+  &.category-arrows {
+    --_chip-border: #37474F;
+    --_chip-bg: #CFD8DC;
+  }
+  // deep orange
+  &.category-banking {
+    --_chip-border: #E64A19;
+    --_chip-bg: #FFCCBC;
+  }
+  // deep purple
+  &.category-bookmarks {
+    --_chip-border: #512DA8;
+    --_chip-bg: #D1C4E9;
+  }
+  // pink
+  &.category-brands,
+  &.category-interface {
+    --_chip-border: #D81B60;
+    --_chip-bg: #F8BBD0;
+  }
+  // blue
+  &.category-computer,
+  &.category-mobile-devices {
+    --_chip-border: #1976D2;
+    --_chip-bg: #BBDEFB;
+  }
+  // grey
+  &.category-cloud {
+    --_chip-border: #9E9E9E;
+    --_chip-bg: #FAFAFA;
+  }
+  // cyan
+  &.category-email {
+    --_chip-border: #0097A7;
+    --_chip-bg: #B2EBF2;
+  }
+  // orange
+  &.category-food {
+    --_chip-border: #E65100;
+    --_chip-bg: #FFE0B2;
+  }
+  // red (strong)
+  &.category-health,
+  &.category-home {
+    --_chip-border: #B71C1C;
+    --_chip-bg: #FF8A80;
+  }
+  // purple
+  &.category-shapes {
+    --_chip-border: #7B1FA2;
+    --_chip-bg: #F3E5F5;
+  }
+  // red
+  &.category-shopping {
+    --_chip-border: #D32F2F;
+    --_chip-bg: #FFCDD2;
+  }
+  // yellow
+  &.category-sports {
+    --_chip-border: #F9A825;
+    --_chip-bg: #FFF9C4;
+  }
+  // brown
+  &.category-travel {
+    --_chip-border: #5D4037;
+    --_chip-bg: #D7CCC8;
+  }
+  // indigo
+  &.category-weather {
+    --_chip-border: #303F9F;
+    --_chip-bg: #C5CAE9;
   }
 }
