@@ -14,6 +14,7 @@ export const IconCategory = {
   City: 'city',
   Chats: 'chats',
   Cloud: 'cloud',
+  Coding: 'coding',
   Computer: 'computer',
   CreativeDesign: 'creative-design',
   DatabaseAndServers: 'database-and-servers',
