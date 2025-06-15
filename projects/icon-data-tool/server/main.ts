@@ -1,3 +1,4 @@
+import { IconCategory } from '@components/category-selector/categories';
 import { pascalCase } from 'change-case';
 import cors from 'cors';
 import express from 'express';
@@ -7,6 +8,11 @@ import { IconData } from './../../homepage/src/app/services/icon-storage/icon-st
 
 const DATA_FILE_PATH =
   'projects/homepage/src/app/services/icon-storage/icon-data.ts';
+
+const CATEGORIES_MAP = Object.entries(IconCategory).reduce(
+  (acc, v) => ({ ...acc, [v[1]]: v[0] }),
+  {} as Record<IconCategory, string>
+);
 
 const app = express();
 
@@ -36,9 +42,9 @@ export const ICON_DATA: IconData[] = [
       (v) =>
         `{ name: '${v.name}', type: IconType.${pascalCase(
           v.type
-        )}, category: IconCategory.${pascalCase(
-          v.category!
-        )}, tags: ${JSON.stringify(v.tags).replaceAll('"', "'")} }`
+        )}, category: IconCategory.${
+          CATEGORIES_MAP[v.category!]
+        }, tags: ${JSON.stringify(v.tags).replaceAll('"', "'")} }`
     )
     .join(',\n  ')}
 ];
