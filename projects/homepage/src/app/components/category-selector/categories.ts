@@ -8,7 +8,7 @@ export const IconCategory = {
   Bathroom: 'bathroom',
   Bookmarks: 'bookmarks',
   Brands: 'brands',
-  Calendar: 'calendar',
+  DateAndTime: 'date-and-time',
   Calls: 'calls',
   Charts: 'charts',
   City: 'city',
