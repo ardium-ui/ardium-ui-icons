@@ -1,7 +1,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M11.1,5L3.6,18c-0.4,0.7,0.1,1.5,0.9,1.5h15c0.8,0,1.2-0.8,0.9-1.5L12.9,5C12.5,4.3,11.5,4.3,11.1,5z"/>
 </svg>
