@@ -121,6 +121,7 @@ export const ICON_DATA: IconData[] = [
   { name: 'bank-card-up-down', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
   { name: 'bank-card-x', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
   { name: 'bank-cards', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
+  { name: 'bank-cards-swap', type: IconType.Outlined, category: IconCategory.Network, tags: [] },
   { name: 'barcode', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
   { name: 'barcode-circle', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
   { name: 'barcode-square', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
