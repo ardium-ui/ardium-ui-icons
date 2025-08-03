@@ -41,9 +41,9 @@ const publicApiPath = outPath + "../public-api.ts";
     const nameWithoutExt = fileName.replace(".svg", "");
     const newFileName = fileName.replace(".svg", ".icon.ts");
     const selector =
-      "ard-icon-" + changeCase.kebabCase(nameWithoutExt + implicitTypeString);
+      "ard-icon-" + changeCase.kebabCase(`${nameWithoutExt} ${implicitTypeString}`);
     const componentName =
-      "ArdIcon" + changeCase.pascalCase(nameWithoutExt + implicitTypeString);
+      "ArdIcon" + changeCase.pascalCase(`${nameWithoutExt} ${implicitTypeString}`);
 
     exportLines.push(
       `export * from './lib/${typeString}/${newFileName.replace(".ts", "")}';`
