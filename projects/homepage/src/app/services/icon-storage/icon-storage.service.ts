@@ -1,6 +1,7 @@
 import { effect, Injectable, signal } from '@angular/core';
 import { persistentSignal, PersistentStorageMethod } from '@ardium-ui/devkit';
 import { IconCategory } from '@components/category-selector/categories';
+import { ICON_DATA } from './icon-data';
 import { IconType } from './icon-storage.types';
 
 @Injectable({
@@ -19,6 +20,8 @@ export class IconStorageService {
   });
 
   readonly searchTerm = signal<string>('');
+
+  readonly filteredIcons = signal(ICON_DATA);
 
   constructor() {
     if (typeof Worker !== 'undefined') {

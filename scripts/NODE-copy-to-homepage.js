@@ -6,3 +6,5 @@ fs.cpSync("../raw", "../projects/homepage/src/assets/icons", {
     return src.endsWith(".svg");
   },
 });
+
+console.log('copied!');

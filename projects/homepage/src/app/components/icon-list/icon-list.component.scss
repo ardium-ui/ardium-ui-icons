@@ -1,7 +1,10 @@
 :host {
-  display: grid;
+  display: block;
+  height: 100%;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.icon-row {
+  display: flex;
+}
+cdk-virtual-scroll-viewport {
+  height: 100%;
 }

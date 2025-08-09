@@ -1,6 +1,9 @@
-<div class="grid">
-  @for (icon of icons(); track icon.name + icon.type) {
-  <app-icon-item [iconData]="icon" />
-  }
-</div>
-<p>No more icons to show...</p>
+<cdk-virtual-scroll-viewport [itemSize]="MIN_ICON_SIZE" minBufferPx="300" maxBufferPx="500">
+  <ng-container *cdkVirtualFor="let row of iconsInRows(); let index = index">
+    <div class="icon-row">
+      @for (icon of row; track icon.name + icon.type) {
+      <app-icon-item [iconData]="icon" />
+      }
+    </div>
+  </ng-container>
+</cdk-virtual-scroll-viewport>
