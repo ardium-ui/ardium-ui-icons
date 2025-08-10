@@ -19,6 +19,7 @@ import { IconItemComponent } from './icon-item/icon-item.component';
   styleUrl: './icon-list.component.scss',
   host: {
     '[style.--_icon-size]': 'MIN_ICON_SIZE + "px"',
+    '[style.--_icons-per-row]': 'iconsPerRow()',
   },
 })
 export class IconListComponent implements OnDestroy {
