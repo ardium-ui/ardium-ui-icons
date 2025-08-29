@@ -17,29 +17,31 @@ const findProblems = function (fileNames) {
   for (const { path, fileName } of fileNames) {
     const content = fs.readFileSync(path + fileName, "utf-8");
 
+    const iconType = path.split("/").at(-2);
+
     if (fileName.match(/^[A-Z]/) && !fileName.match(/TEMPLATE/)) {
-      oldFileNames[fileName] = [fileName];
+      oldFileNames[iconType + '/' + fileName] = [fileName];
     }
 
     if (!content.match('.st0')) {
-      noSt0s[fileName] = [fileName];
+      noSt0s[iconType + '/' + fileName] = [fileName];
     }
 
     const foundComments = content.match(/<!--.+?-->/gs);
     if (foundComments) {
-      comments[fileName] = foundComments;
+      comments[iconType + '/' + fileName] = foundComments;
     }
 
     const foundTitles = content.match(/<title>.+?<\/title>/gs);
     if (foundTitles) {
-      titles[fileName] = foundTitles;
+      titles[iconType + '/' + fileName] = foundTitles;
     }
 
     const foundIds = content
       .match(/id=".+?"/g)
       ?.map((v) => v.match(/id="(.+?)"/)[1]);
     if (foundIds?.length) {
-      ids[fileName] = foundIds;
+      ids[iconType + '/' + fileName] = foundIds;
 
       const newContent = content.replace(/\s*id=".+?"/g, "");
       fs.writeFileSync(path + fileName, newContent, { encoding: "utf-8" });
@@ -50,7 +52,7 @@ const findProblems = function (fileNames) {
       ?.map((v) => v.match(/stroke-width="(.+?)"/)[1])
       .filter((v) => !v.match(/^1.5$/));
     if (foundStrokes?.length) {
-      strokes[fileName] = foundStrokes;
+      strokes[iconType + '/' + fileName] = foundStrokes;
     }
 
     if (!path.match("filled")) {
@@ -59,33 +61,33 @@ const findProblems = function (fileNames) {
         ?.map((v) => v.match(/fill="(.+?)"/)[1])
         .filter((v) => !v.match(/^none$/));
       if (foundFills?.length) {
-        fills[fileName] = foundFills;
+        fills[iconType + '/' + fileName] = foundFills;
       }
     }
 
     const foundDisplayNones = content.match(/display:none/g);
     if (foundDisplayNones?.length) {
-      displayNones[fileName] = foundDisplayNones;
+      displayNones[iconType + '/' + fileName] = foundDisplayNones;
     }
 
     const foundSt1s = content.match(/.st1/g);
     if (foundSt1s?.length) {
-      st1s[fileName] = foundSt1s;
+      st1s[iconType + '/' + fileName] = foundSt1s;
     }
 
     const foundImages = content.match(/<image/g);
     if (foundImages?.length) {
-      images[fileName] = foundImages;
+      images[iconType + '/' + fileName] = foundImages;
     }
 
     const foundNonBlacks = content.match(/#[0-9a-f]{6}/gi)?.filter(v => v !== '#000000');
     if (foundNonBlacks?.length) {
-      nonBlacks[fileName] = foundNonBlacks;
+      nonBlacks[iconType + '/' + fileName] = foundNonBlacks;
     }
 
     const foundWrongSize = content.match(/viewBox="0 0 [013-9]\d* [013-9]\d*"/);
     if (foundWrongSize) {
-      wrongSizes[fileName] = foundWrongSize;
+      wrongSizes[iconType + '/' + fileName] = foundWrongSize;
     }
   }
   return {

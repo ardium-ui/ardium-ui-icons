@@ -9,9 +9,12 @@ const noOfProblems = require("./find-issues.js").numberOfProblems(problems);
 const outPath = "./out/";
 
 fsExtra.ensureDirSync(outPath);
+fsExtra.emptyDirSync(outPath);
 
 for (const key in problems) {
   const value = problems[key];
+
+  if (Object.keys(value).length === 0) continue;
 
   fs.writeFileSync(outPath + key + ".json", JSON.stringify(value, null, 2));
 }

@@ -23,6 +23,14 @@ const performCleanup = function (fileNames) {
       content = content.replace(/class="st[1-9]"/g, 'class="st0"');
     }
 
+    const addedSt0s = content.match(/<(path|circle|rect)(?![^>]+class)/g);
+    if (addedSt0s) {
+      content = content.replace(
+        /<(path|circle|rect)(?![^>]+class)/g,
+        '<$1 class="st0"'
+      );
+    }
+
     const foundImages = content.match(/<image/g);
     if (foundImages) {
       content = content.replace(
