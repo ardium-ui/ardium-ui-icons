@@ -8,7 +8,7 @@
 
 scripts/out
 projects/icons/src/lib
-projects/icons/src/public-api
+projects/icons/src/public-api.ts
 
 # Node
 /node_modules
