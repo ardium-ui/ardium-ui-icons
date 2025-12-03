@@ -6,6 +6,7 @@
     "serve": "cd projects/playground && ng serve",
     "start-homepage": "ng serve --project=homepage --port=4242",
     "start-data-tool": "ng serve --project=icon-data-tool --port=4243",
+    "start-data-tool-server": "tsx projects/icon-data-tool/server/main.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

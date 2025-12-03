@@ -7,7 +7,7 @@ import { PartialIconData } from '../src/app/services/icon-data/partial-icon-data
 import { IconData } from './../../homepage/src/app/services/icon-storage/icon-storage.types';
 
 const DATA_FILE_PATH =
-  'projects/homepage/src/app/services/icon-storage/icon-data.ts';
+  '../../homepage/src/app/services/icon-storage/icon-data.ts';
 
 const CATEGORIES_MAP = Object.entries(IconCategory).reduce(
   (acc, v) => ({ ...acc, [v[1]]: v[0] }),
@@ -17,7 +17,7 @@ const CATEGORIES_MAP = Object.entries(IconCategory).reduce(
 const app = express();
 
 app.use(cors({ origin: '*' }));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 
 const router = express.Router();
 
