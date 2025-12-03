@@ -8,11 +8,17 @@ const destPath = path.join(destProject, "public/icons");
 const outFilePath = path.join(destProject, "src/app/data/icon-list.ts");
 const existingInFilePath =
   "../projects/homepage/src/app/services/icon-storage/icon-data.ts";
-  const existingOutFilePath = path.join(destProject, "src/app/data/existing-icon-data.ts");
+const existingOutFilePath = path.join(
+  destProject,
+  "src/app/data/existing-icon-data.ts"
+);
 
 fsExtra.ensureDirSync(destPath);
 
 try {
+  if (fs.existsSync(destPath)) {
+    fs.rmSync(destPath, { recursive: true });
+  }
   fs.cpSync("../raw", destPath, {
     recursive: true,
     filter: (src) => {
