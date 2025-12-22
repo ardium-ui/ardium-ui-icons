@@ -902,6 +902,8 @@ export const ICON_DATA: IconData[] = [
   { name: 'pin', type: IconType.Outlined, category: IconCategory.Interface, tags: [] },
   { name: 'piston', type: IconType.Outlined, category: IconCategory.Vehicles, tags: [] },
   { name: 'pizza', type: IconType.Outlined, category: IconCategory.Food, tags: [] },
+  { name: 'placeholder', type: IconType.Outlined, category: IconCategory.Interface, tags: ['unknown','missing'] },
+  { name: 'placeholder-2', type: IconType.Outlined, category: IconCategory.Interface, tags: ['unknown','missing'] },
   { name: 'plant', type: IconType.Outlined, category: IconCategory.Nature, tags: ['farm'] },
   { name: 'plant-2', type: IconType.Outlined, category: IconCategory.Nature, tags: [] },
   { name: 'play', type: IconType.Outlined, category: IconCategory.Interface, tags: ['video','music','movie'] },
