@@ -2,6 +2,10 @@
   background-color: var(--ard-bg-darker);
   box-shadow: var(--box-shadow);
   border-top: var(--border);
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  padding-bottom: 1rem;
+  overflow-y: auto;
 }
 .sidebar-section {
   padding: 1rem;

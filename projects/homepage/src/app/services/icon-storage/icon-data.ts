@@ -120,7 +120,7 @@ export const ICON_DATA: IconData[] = [
   { name: 'bank-card-up-down', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
   { name: 'bank-card-x', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
   { name: 'bank-cards', type: IconType.Outlined, category: IconCategory.Banking, tags: ['credit card','debit card','payment'] },
-  { name: 'bank-cards-swap', type: IconType.Outlined, category: IconCategory.Network, tags: [] },
+  { name: 'bank-cards-swap', type: IconType.Outlined, category: IconCategory.Banking, tags: [] },
   { name: 'barcode', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
   { name: 'barcode-circle', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
   { name: 'barcode-square', type: IconType.Outlined, category: IconCategory.Shopping, tags: [] },
@@ -1221,27 +1221,27 @@ export const ICON_DATA: IconData[] = [
   { name: 'temperature-up', type: IconType.Outlined, category: IconCategory.Weather, tags: ['thermometer'] },
   { name: 'terminal', type: IconType.Outlined, category: IconCategory.Coding, tags: ['console','command','prompt'] },
   { name: 'text', type: IconType.Outlined, category: IconCategory.Interface, tags: [] },
-  { name: 'ticket', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-check', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-check-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-cloud', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-error', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-error-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-heart', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-info', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-info-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-minus', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-minus-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-music', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-percent', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-plane', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-plane-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-play', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-plus', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-plus-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-star', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-x', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
-  { name: 'ticket-x-2', type: IconType.Outlined, category: IconCategory.Travel, tags: [] },
+  { name: 'ticket', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-check', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-check-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-cloud', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-error', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-error-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-heart', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-info', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-info-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-minus', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-minus-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-music', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-percent', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-plane', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-plane-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-play', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-plus', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-plus-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-star', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-x', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
+  { name: 'ticket-x-2', type: IconType.Outlined, category: IconCategory.Tickets, tags: [] },
   { name: 'times', type: IconType.Outlined, category: IconCategory.Symbols, tags: ['math'] },
   { name: 'toast', type: IconType.Outlined, category: IconCategory.Food, tags: [] },
   { name: 'toggle', type: IconType.Outlined, category: IconCategory.Interface, tags: ['switch'] },
@@ -1352,3 +1352,14 @@ export const ICON_DATA: IconData[] = [
   { name: 'zoom-out', type: IconType.Outlined, category: IconCategory.Interface, tags: [] }
 ];
   
+export const ICONS_BY_CATEGORY: { [key in IconCategory]: IconData[] } = Object.values(IconCategory).reduce((acc, category) => {
+  acc[category] = ICON_DATA.filter(icon => icon.category === category);
+  return acc;
+}, {} as { [key in IconCategory]: IconData[] });
+
+export const ICON_CATEGORY_COUNTS: { [key in IconCategory]: number } = Object.values(IconCategory).reduce((acc, category) => {
+  acc[category] = ICONS_BY_CATEGORY[category].length;
+  return acc;
+}, {} as { [key in IconCategory]: number });
+
+export const TOTAL_ICONS = ICON_DATA.length;

@@ -31,7 +31,7 @@
     "@angular/platform-browser-dynamic": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@ardium-ui/devkit": "^7.7.0",
-    "@ardium-ui/ui": "^3.4.4",
+    "@ardium-ui/ui": "5.0.0-alpha.28",
     "case": "^1.6.3",
     "change-case": "^5.4.4",
     "fuse.js": "^7.1.0",

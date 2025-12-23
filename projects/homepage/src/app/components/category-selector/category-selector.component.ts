@@ -1,11 +1,76 @@
 import { Component } from '@angular/core';
+import { ArdIconAlert, ArdIconArrowsSwapVertical, ArdIconBaggage, ArdIconBallAmericanFootball, ArdIconBankCard, ArdIconBedDouble, ArdIconBookmark, ArdIconBox, ArdIconBrandYoutube, ArdIconBuilding, ArdIconBurger, ArdIconBusFront, ArdIconButtonCursor, ArdIconCalculator, ArdIconCalendarDots_2, ArdIconCall, ArdIconChat, ArdIconCloud, ArdIconCloudRain_2, ArdIconCode, ArdIconCoins, ArdIconColor, ArdIconComputerMonitor, ArdIconDatabase, ArdIconDocument, ArdIconDog, ArdIconElectricity, ArdIconEmoji, ArdIconEnvelope, ArdIconGameController, ArdIconGift, ArdIconGraduationCap_2, ArdIconGraphChart, ArdIconHeadphones, ArdIconHealthPlus, ArdIconHeart_2, ArdIconImage, ArdIconInfinity, ArdIconLocationPin, ArdIconOven, ArdIconPentagon, ArdIconPlaceholder, ArdIconSearch_2, ArdIconSettings, ArdIconShield, ArdIconShoppingCart, ArdIconStar, ArdIconTag, ArdIconText, ArdIconTicket, ArdIconToiletSign, ArdIconTreeConiferous, ArdIconUser, ArdIconWifi } from '@ardium-ui/icons';
+import {
+  ICON_CATEGORY_COUNTS,
+  TOTAL_ICONS,
+} from '@services/icon-storage/icon-data';
+import { IconCategory } from './categories';
+import { CategoryButtonComponent } from './category-button/category-button.component';
 
 @Component({
   selector: 'app-category-selector',
-  imports: [],
+  imports: [
+    CategoryButtonComponent,
+    ArdIconPlaceholder,
+    ArdIconAlert,
+    ArdIconArrowsSwapVertical,
+    ArdIconDog,
+    ArdIconHeadphones,
+    ArdIconCoins,
+    ArdIconBookmark,
+    ArdIconBrandYoutube,
+    ArdIconCall,
+    ArdIconGraphChart,
+    ArdIconBuilding,
+    ArdIconChat,
+    ArdIconCloud,
+    ArdIconCode,
+    ArdIconDatabase,
+    ArdIconCalendarDots_2,
+    ArdIconCalculator,
+    ArdIconDocument,
+    ArdIconElectricity,
+    ArdIconEmoji,
+    ArdIconGift,
+    ArdIconBox,
+    ArdIconComputerMonitor,
+    ArdIconSettings,
+    ArdIconBankCard,
+    ArdIconBurger,
+    ArdIconGameController,
+    ArdIconHealthPlus,
+    ArdIconHeart_2,
+    ArdIconBedDouble,
+    ArdIconButtonCursor,
+    ArdIconOven,
+    ArdIconEnvelope,
+    ArdIconLocationPin,
+    ArdIconTreeConiferous,
+    ArdIconWifi,
+    ArdIconImage,
+    ArdIconGraduationCap_2,
+    ArdIconSearch_2,
+    ArdIconShield,
+    ArdIconPentagon,
+    ArdIconShoppingCart,
+    ArdIconStar,
+    ArdIconInfinity,
+    ArdIconTag,
+    ArdIconText,
+    ArdIconTicket,
+    ArdIconBaggage,
+    ArdIconUser,
+    ArdIconBusFront,
+    ArdIconCloudRain_2,
+    ArdIconColor,
+    ArdIconBallAmericanFootball,
+    ArdIconToiletSign
+],
   templateUrl: './category-selector.component.html',
-  styleUrl: './category-selector.component.scss'
+  styleUrl: './category-selector.component.scss',
 })
 export class CategorySelectorComponent {
-
+  readonly IconCategory = IconCategory;
+  readonly totalIcons = TOTAL_ICONS;
+  readonly categoryCounts = ICON_CATEGORY_COUNTS;
 }

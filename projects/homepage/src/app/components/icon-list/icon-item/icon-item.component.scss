@@ -10,6 +10,7 @@ $padding: 0.25rem;
   position: relative;
   width: var(--_icon-size);
   padding: $padding;
+  padding-bottom: 1rem;
 }
 img {
   width: 3rem;
@@ -19,6 +20,7 @@ span {
   bottom: 0.375rem;
   font-size: 0.75rem;
   opacity: 40%;
+  line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
   max-width: calc(100% - #{$padding * 2});
