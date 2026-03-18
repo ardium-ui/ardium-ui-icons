@@ -6,10 +6,6 @@
   display: flex;
   width: max-content;
   border-left: var(--border);
-
-  &:first-of-type {
-    border-top: var(--border);
-  }
 }
 cdk-virtual-scroll-viewport {
   height: 100%;
