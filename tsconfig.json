@@ -8,8 +8,6 @@
       "strict": true,
       "noImplicitOverride": true,
       "paths": {
-        "@ardium-ui/icons": ["projects/icons/src/public-api", "dist/icons"],
-        
         "@env": ["projects/homepage/src/environemnts/environment"],
         "@components/*": ["projects/homepage/src/app/components/*"],
         "@services/*": ["projects/homepage/src/app/services/*"],

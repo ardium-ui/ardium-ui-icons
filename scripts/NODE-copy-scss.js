@@ -1,3 +1,3 @@
-require("fs").cpSync("./projects/icons/src/styles", "./dist/icon/styles/", {
+require("fs").cpSync("./projects/icons/src/styles", "./dist/icons/styles/", {
   recursive: true,
 });
