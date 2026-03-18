@@ -14,3 +14,11 @@
 cdk-virtual-scroll-viewport {
   height: 100%;
 }
+.final-row {
+  height: var(--_icon-size);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--ard-text3);
+}
