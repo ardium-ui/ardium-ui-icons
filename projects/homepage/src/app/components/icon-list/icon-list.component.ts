@@ -1,12 +1,14 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkVirtualScrollViewport, ScrollingModule } from '@angular/cdk/scrolling';
 import {
   Component,
   computed,
+  effect,
   inject,
   input,
   OnDestroy,
   signal,
+  viewChild,
 } from '@angular/core';
 import { IconData } from '@services/icon-storage/icon-storage.types';
 import { Subject, takeUntil } from 'rxjs';
@@ -38,6 +40,8 @@ export class IconListComponent implements OnDestroy {
     return allRows;
   });
 
+  readonly scrollHost = viewChild.required(CdkVirtualScrollViewport);
+
   readonly MIN_ICON_SIZE: number = 148;
 
   readonly BREAKPOINTS: string[] = new Array(30)
@@ -65,6 +69,11 @@ export class IconListComponent implements OnDestroy {
           this._iconsPerRow.set(breakpointIndex);
         }
       });
+      
+    effect(() => {
+      this.icons(); // trigger effect
+      this.scrollHost().scrollToIndex(0);
+    })
   }
 
   readonly destroyed = new Subject<void>();

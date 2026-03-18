@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 import {
   ArdIconAlert,
   ArdIconArrowsSwapVertical,
@@ -128,4 +128,6 @@ export class CategorySelectorComponent {
   readonly IconCategory = IconCategory;
   readonly totalIcons = TOTAL_ICONS;
   readonly categoryCounts = ICON_CATEGORY_COUNTS;
+
+  readonly selectedCategory = model.required<IconCategory | null>();
 }

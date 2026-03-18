@@ -1,165 +1,440 @@
-<app-category-button label="All" [count]="totalIcons">
+<app-category-button
+  label="All"
+  [count]="totalIcons"
+  (click)="selectedCategory.set(null)"
+  [active]="selectedCategory() === null"
+>
   <ard-icon-placeholder />
 </app-category-button>
-<app-category-button label="Alerts" [count]="categoryCounts.alerts">
+<app-category-button
+  label="Alerts"
+  [count]="categoryCounts.alerts"
+  (click)="selectedCategory.set(IconCategory.Alerts)"
+  [active]="selectedCategory() === IconCategory.Alerts"
+>
   <ard-icon-alert />
 </app-category-button>
-<app-category-button label="Animals" [count]="categoryCounts.animals">
+<app-category-button
+  label="Animals"
+  [count]="categoryCounts.animals"
+  (click)="selectedCategory.set(IconCategory.Animals)"
+  [active]="selectedCategory() === IconCategory.Animals"
+>
   <ard-icon-dog />
 </app-category-button>
-<app-category-button label="Arrows" [count]="categoryCounts.arrows">
+<app-category-button
+  label="Arrows"
+  [count]="categoryCounts.arrows"
+  (click)="selectedCategory.set(IconCategory.Arrows)"
+  [active]="selectedCategory() === IconCategory.Arrows"
+>
   <ard-icon-arrows-swap-vertical />
 </app-category-button>
-<app-category-button label="Audio & Video" [count]="categoryCounts.audioAndVideo">
+<app-category-button
+  label="Audio & Video"
+  [count]="categoryCounts.audioAndVideo"
+  (click)="selectedCategory.set(IconCategory.AudioAndVideo)"
+  [active]="selectedCategory() === IconCategory.AudioAndVideo"
+>
   <ard-icon-headphones />
 </app-category-button>
-<app-category-button label="Banking" [count]="categoryCounts.banking">
+<app-category-button
+  label="Banking"
+  [count]="categoryCounts.banking"
+  (click)="selectedCategory.set(IconCategory.Banking)"
+  [active]="selectedCategory() === IconCategory.Banking"
+>
   <ard-icon-bank-card />
 </app-category-button>
-<app-category-button label="Bathroom" [count]="categoryCounts.bathroom">
+<app-category-button
+  label="Bathroom"
+  [count]="categoryCounts.bathroom"
+  (click)="selectedCategory.set(IconCategory.Bathroom)"
+  [active]="selectedCategory() === IconCategory.Bathroom"
+>
   <ard-icon-toilet-sign />
 </app-category-button>
-<app-category-button label="Bookmarks" [count]="categoryCounts.bookmarks">
+<app-category-button
+  label="Bookmarks"
+  [count]="categoryCounts.bookmarks"
+  (click)="selectedCategory.set(IconCategory.Bookmarks)"
+  [active]="selectedCategory() === IconCategory.Bookmarks"
+>
   <ard-icon-bookmark />
 </app-category-button>
-<app-category-button label="Brands" [count]="categoryCounts.brands">
+<app-category-button
+  label="Brands"
+  [count]="categoryCounts.brands"
+  (click)="selectedCategory.set(IconCategory.Brands)"
+  [active]="selectedCategory() === IconCategory.Brands"
+>
   <ard-icon-brand-youtube />
 </app-category-button>
-<app-category-button label="Calls" [count]="categoryCounts.calls">
+<app-category-button
+  label="Calls"
+  [count]="categoryCounts.calls"
+  (click)="selectedCategory.set(IconCategory.Calls)"
+  [active]="selectedCategory() === IconCategory.Calls"
+>
   <ard-icon-call />
 </app-category-button>
-<app-category-button label="Charts" [count]="categoryCounts.charts">
+<app-category-button
+  label="Charts"
+  [count]="categoryCounts.charts"
+  (click)="selectedCategory.set(IconCategory.Charts)"
+  [active]="selectedCategory() === IconCategory.Charts"
+>
   <ard-icon-graph-chart />
 </app-category-button>
-<app-category-button label="City" [count]="categoryCounts.city">
+<app-category-button
+  label="City"
+  [count]="categoryCounts.city"
+  (click)="selectedCategory.set(IconCategory.City)"
+  [active]="selectedCategory() === IconCategory.City"
+>
   <ard-icon-building />
 </app-category-button>
-<app-category-button label="Chats" [count]="categoryCounts.chats">
+<app-category-button
+  label="Chats"
+  [count]="categoryCounts.chats"
+  (click)="selectedCategory.set(IconCategory.Chats)"
+  [active]="selectedCategory() === IconCategory.Chats"
+>
   <ard-icon-chat />
 </app-category-button>
-<app-category-button label="Cloud" [count]="categoryCounts.cloud">
+<app-category-button
+  label="Cloud"
+  [count]="categoryCounts.cloud"
+  (click)="selectedCategory.set(IconCategory.Cloud)"
+  [active]="selectedCategory() === IconCategory.Cloud"
+>
   <ard-icon-cloud />
 </app-category-button>
-<app-category-button label="Coding" [count]="categoryCounts.coding">
+<app-category-button
+  label="Coding"
+  [count]="categoryCounts.coding"
+  (click)="selectedCategory.set(IconCategory.Coding)"
+  [active]="selectedCategory() === IconCategory.Coding"
+>
   <ard-icon-code />
 </app-category-button>
-<app-category-button label="Computer" [count]="categoryCounts.computer">
+<app-category-button
+  label="Computer"
+  [count]="categoryCounts.computer"
+  (click)="selectedCategory.set(IconCategory.Computer)"
+  [active]="selectedCategory() === IconCategory.Computer"
+>
   <ard-icon-computer-monitor />
 </app-category-button>
-<app-category-button label="Creative Design" [count]="categoryCounts.creativeDesign">
+<app-category-button
+  label="Creative Design"
+  [count]="categoryCounts.creativeDesign"
+  (click)="selectedCategory.set(IconCategory.CreativeDesign)"
+  [active]="selectedCategory() === IconCategory.CreativeDesign"
+>
   <ard-icon-color />
 </app-category-button>
-<app-category-button label="DB & Servers" [count]="categoryCounts.dbAndServers">
+<app-category-button
+  label="DB & Servers"
+  [count]="categoryCounts.dbAndServers"
+  (click)="selectedCategory.set(IconCategory.DatabaseAndServers)"
+  [active]="selectedCategory() === IconCategory.DatabaseAndServers"
+>
   <ard-icon-database />
 </app-category-button>
-<app-category-button label="Date & Time" [count]="categoryCounts.dateAndTime">
+<app-category-button
+  label="Date & Time"
+  [count]="categoryCounts.dateAndTime"
+  (click)="selectedCategory.set(IconCategory.DateAndTime)"
+  [active]="selectedCategory() === IconCategory.DateAndTime"
+>
   <ard-icon-calendar-dots-2 />
 </app-category-button>
-<app-category-button label="Delivery" [count]="categoryCounts.delivery">
+<app-category-button
+  label="Delivery"
+  [count]="categoryCounts.delivery"
+  (click)="selectedCategory.set(IconCategory.Delivery)"
+  [active]="selectedCategory() === IconCategory.Delivery"
+>
   <ard-icon-box />
 </app-category-button>
-<app-category-button label="Devices" [count]="categoryCounts.devices">
+<app-category-button
+  label="Devices"
+  [count]="categoryCounts.devices"
+  (click)="selectedCategory.set(IconCategory.Devices)"
+  [active]="selectedCategory() === IconCategory.Devices"
+>
   <ard-icon-calculator />
 </app-category-button>
-<app-category-button label="Files & Folders" [count]="categoryCounts.docsAndFolders">
+<app-category-button
+  label="Files & Folders"
+  [count]="categoryCounts.docsAndFolders"
+  (click)="selectedCategory.set(IconCategory.DocumentsAndFolders)"
+  [active]="selectedCategory() === IconCategory.DocumentsAndFolders"
+>
   <ard-icon-document />
 </app-category-button>
-<app-category-button label="Electricity" [count]="categoryCounts.electricity">
+<app-category-button
+  label="Electricity"
+  [count]="categoryCounts.electricity"
+  (click)="selectedCategory.set(IconCategory.Electricity)"
+  [active]="selectedCategory() === IconCategory.Electricity"
+>
   <ard-icon-electricity />
 </app-category-button>
-<app-category-button label="Emojis" [count]="categoryCounts.emojis">
+<app-category-button
+  label="Emojis"
+  [count]="categoryCounts.emojis"
+  (click)="selectedCategory.set(IconCategory.Emojis)"
+  [active]="selectedCategory() === IconCategory.Emojis"
+>
   <ard-icon-emoji />
 </app-category-button>
-<app-category-button label="Festive" [count]="categoryCounts.festive">
+<app-category-button
+  label="Festive"
+  [count]="categoryCounts.festive"
+  (click)="selectedCategory.set(IconCategory.Festive)"
+  [active]="selectedCategory() === IconCategory.Festive"
+>
   <ard-icon-gift />
 </app-category-button>
-<app-category-button label="Filters & Settings" [count]="categoryCounts.filtersAndSettings">
+<app-category-button
+  label="Filters & Settings"
+  [count]="categoryCounts.filtersAndSettings"
+  (click)="selectedCategory.set(IconCategory.FiltersAndSettings)"
+  [active]="selectedCategory() === IconCategory.FiltersAndSettings"
+>
   <ard-icon-settings />
 </app-category-button>
-<app-category-button label="Financial" [count]="categoryCounts.financial">
+<app-category-button
+  label="Financial"
+  [count]="categoryCounts.financial"
+  (click)="selectedCategory.set(IconCategory.Financial)"
+  [active]="selectedCategory() === IconCategory.Financial"
+>
   <ard-icon-coins />
 </app-category-button>
-<app-category-button label="Food" [count]="categoryCounts.food">
+<app-category-button
+  label="Food"
+  [count]="categoryCounts.food"
+  (click)="selectedCategory.set(IconCategory.Food)"
+  [active]="selectedCategory() === IconCategory.Food"
+>
   <ard-icon-burger />
 </app-category-button>
-<app-category-button label="Games" [count]="categoryCounts.games">
+<app-category-button
+  label="Games"
+  [count]="categoryCounts.games"
+  (click)="selectedCategory.set(IconCategory.Games)"
+  [active]="selectedCategory() === IconCategory.Games"
+>
   <ard-icon-game-controller />
 </app-category-button>
-<app-category-button label="Gestures" [count]="categoryCounts.gestures">
+<app-category-button
+  label="Gestures"
+  [count]="categoryCounts.gestures"
+  (click)="selectedCategory.set(IconCategory.Gestures)"
+  [active]="selectedCategory() === IconCategory.Gestures"
+>
   <!-- <ard-icon-gesture /> -->
 </app-category-button>
-<app-category-button label="Health" [count]="categoryCounts.health">
+<app-category-button
+  label="Health"
+  [count]="categoryCounts.health"
+  (click)="selectedCategory.set(IconCategory.Health)"
+  [active]="selectedCategory() === IconCategory.Health"
+>
   <ard-icon-health-plus />
 </app-category-button>
-<app-category-button label="Hearts" [count]="categoryCounts.hearts">
+<app-category-button
+  label="Hearts"
+  [count]="categoryCounts.hearts"
+  (click)="selectedCategory.set(IconCategory.Hearts)"
+  [active]="selectedCategory() === IconCategory.Hearts"
+>
   <ard-icon-heart-2 />
 </app-category-button>
-<app-category-button label="Home" [count]="categoryCounts.home">
+<app-category-button
+  label="Home"
+  [count]="categoryCounts.home"
+  (click)="selectedCategory.set(IconCategory.Home)"
+  [active]="selectedCategory() === IconCategory.Home"
+>
   <ard-icon-bed-double />
 </app-category-button>
-<app-category-button label="Interface" [count]="categoryCounts.interface">
+<app-category-button
+  label="Interface"
+  [count]="categoryCounts.interface"
+  (click)="selectedCategory.set(IconCategory.Interface)"
+  [active]="selectedCategory() === IconCategory.Interface"
+>
   <ard-icon-button-cursor />
 </app-category-button>
-<app-category-button label="Kitchen" [count]="categoryCounts.kitchen">
+<app-category-button
+  label="Kitchen"
+  [count]="categoryCounts.kitchen"
+  (click)="selectedCategory.set(IconCategory.Kitchen)"
+  [active]="selectedCategory() === IconCategory.Kitchen"
+>
   <ard-icon-oven />
 </app-category-button>
-<app-category-button label="Mail" [count]="categoryCounts.mail">
+<app-category-button
+  label="Mail"
+  [count]="categoryCounts.mail"
+  (click)="selectedCategory.set(IconCategory.Mail)"
+  [active]="selectedCategory() === IconCategory.Mail"
+>
   <ard-icon-envelope />
 </app-category-button>
-<app-category-button label="Maps" [count]="categoryCounts.maps">
+<app-category-button
+  label="Maps"
+  [count]="categoryCounts.maps"
+  (click)="selectedCategory.set(IconCategory.Maps)"
+  [active]="selectedCategory() === IconCategory.Maps"
+>
   <ard-icon-location-pin />
 </app-category-button>
-<app-category-button label="Nature" [count]="categoryCounts.nature">
+<app-category-button
+  label="Nature"
+  [count]="categoryCounts.nature"
+  (click)="selectedCategory.set(IconCategory.Nature)"
+  [active]="selectedCategory() === IconCategory.Nature"
+>
   <ard-icon-tree-coniferous />
 </app-category-button>
-<app-category-button label="Network" [count]="categoryCounts.network">
+<app-category-button
+  label="Network"
+  [count]="categoryCounts.network"
+  (click)="selectedCategory.set(IconCategory.Network)"
+  [active]="selectedCategory() === IconCategory.Network"
+>
   <ard-icon-wifi />
 </app-category-button>
-<app-category-button label="Photos" [count]="categoryCounts.photos">
+<app-category-button
+  label="Photos"
+  [count]="categoryCounts.photos"
+  (click)="selectedCategory.set(IconCategory.Photos)"
+  [active]="selectedCategory() === IconCategory.Photos"
+>
   <ard-icon-image />
 </app-category-button>
-<app-category-button label="School" [count]="categoryCounts.school">
+<app-category-button
+  label="School"
+  [count]="categoryCounts.school"
+  (click)="selectedCategory.set(IconCategory.School)"
+  [active]="selectedCategory() === IconCategory.School"
+>
   <ard-icon-graduation-cap-2 />
 </app-category-button>
-<app-category-button label="Search & Scan" [count]="categoryCounts.searchAndScan">
+<app-category-button
+  label="Search & Scan"
+  [count]="categoryCounts.searchAndScan"
+  (click)="selectedCategory.set(IconCategory.SearchAndScan)"
+  [active]="selectedCategory() === IconCategory.SearchAndScan"
+>
   <ard-icon-search-2 />
 </app-category-button>
-<app-category-button label="Security" [count]="categoryCounts.security">
+<app-category-button
+  label="Security"
+  [count]="categoryCounts.security"
+  (click)="selectedCategory.set(IconCategory.Security)"
+  [active]="selectedCategory() === IconCategory.Security"
+>
   <ard-icon-shield />
 </app-category-button>
-<app-category-button label="Shapes" [count]="categoryCounts.shapes">
+<app-category-button
+  label="Shapes"
+  [count]="categoryCounts.shapes"
+  (click)="selectedCategory.set(IconCategory.Shapes)"
+  [active]="selectedCategory() === IconCategory.Shapes"
+>
   <ard-icon-pentagon />
 </app-category-button>
-<app-category-button label="Shopping" [count]="categoryCounts.shopping">
+<app-category-button
+  label="Shopping"
+  [count]="categoryCounts.shopping"
+  (click)="selectedCategory.set(IconCategory.Shopping)"
+  [active]="selectedCategory() === IconCategory.Shopping"
+>
   <ard-icon-shopping-cart />
 </app-category-button>
-<app-category-button label="Space & Stars" [count]="categoryCounts.spaceAndStars">
+<app-category-button
+  label="Space & Stars"
+  [count]="categoryCounts.spaceAndStars"
+  (click)="selectedCategory.set(IconCategory.SpaceAndStars)"
+  [active]="selectedCategory() === IconCategory.SpaceAndStars"
+>
   <ard-icon-star />
 </app-category-button>
-<app-category-button label="Sports" [count]="categoryCounts.sports">
+<app-category-button
+  label="Sports"
+  [count]="categoryCounts.sports"
+  (click)="selectedCategory.set(IconCategory.Sports)"
+  [active]="selectedCategory() === IconCategory.Sports"
+>
   <ard-icon-ball-american-football />
 </app-category-button>
-<app-category-button label="Symbols" [count]="categoryCounts.symbols">
+<app-category-button
+  label="Symbols"
+  [count]="categoryCounts.symbols"
+  (click)="selectedCategory.set(IconCategory.Symbols)"
+  [active]="selectedCategory() === IconCategory.Symbols"
+>
   <ard-icon-infinity />
 </app-category-button>
-<app-category-button label="Tags" [count]="categoryCounts.tags">
+<app-category-button
+  label="Tags"
+  [count]="categoryCounts.tags"
+  (click)="selectedCategory.set(IconCategory.Tags)"
+  [active]="selectedCategory() === IconCategory.Tags"
+>
   <ard-icon-tag />
 </app-category-button>
-<app-category-button label="Text & Numbers" [count]="categoryCounts.textAndNumbers">
+<app-category-button
+  label="Text & Numbers"
+  [count]="categoryCounts.textAndNumbers"
+  (click)="selectedCategory.set(IconCategory.TextAndNumbers)"
+  [active]="selectedCategory() === IconCategory.TextAndNumbers"
+>
   <ard-icon-text />
 </app-category-button>
-<app-category-button label="Tickets" [count]="categoryCounts.tickets">
+<app-category-button
+  label="Tickets"
+  [count]="categoryCounts.tickets"
+  (click)="selectedCategory.set(IconCategory.Tickets)"
+  [active]="selectedCategory() === IconCategory.Tickets"
+>
   <ard-icon-ticket />
 </app-category-button>
-<app-category-button label="Travel" [count]="categoryCounts.travel">
+<app-category-button
+  label="Travel"
+  [count]="categoryCounts.travel"
+  (click)="selectedCategory.set(IconCategory.Travel)"
+  [active]="selectedCategory() === IconCategory.Travel"
+>
   <ard-icon-baggage />
 </app-category-button>
-<app-category-button label="User" [count]="categoryCounts.user">
+<app-category-button
+  label="User"
+  [count]="categoryCounts.user"
+  (click)="selectedCategory.set(IconCategory.User)"
+  [active]="selectedCategory() === IconCategory.User"
+>
   <ard-icon-user />
 </app-category-button>
-<app-category-button label="Vehicles" [count]="categoryCounts.vehicles">
+<app-category-button
+  label="Vehicles"
+  [count]="categoryCounts.vehicles"
+  (click)="selectedCategory.set(IconCategory.Vehicles)"
+  [active]="selectedCategory() === IconCategory.Vehicles"
+>
   <ard-icon-bus-front />
 </app-category-button>
-<app-category-button label="Weather" [count]="categoryCounts.weather">
+<app-category-button
+  label="Weather"
+  [count]="categoryCounts.weather"
+  (click)="selectedCategory.set(IconCategory.Weather)"
+  [active]="selectedCategory() === IconCategory.Weather"
+>
   <ard-icon-cloud-rain-2 />
 </app-category-button>

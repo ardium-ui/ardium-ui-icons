@@ -4,5 +4,7 @@
 </div>
 <div class="sidebar-section">
   <div class="sidebar-heading">Categories</div>
-  <app-category-selector />
+  <app-category-selector
+    [(selectedCategory)]="iconStorageService.selectedCategory"
+  />
 </div>

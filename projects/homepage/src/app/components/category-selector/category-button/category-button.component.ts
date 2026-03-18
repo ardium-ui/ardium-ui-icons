@@ -9,4 +9,5 @@ import { Component, input } from '@angular/core';
 export class CategoryButtonComponent {
   readonly label = input.required<string>();
   readonly count = input.required<number>();
+  readonly active = input.required<boolean>();
 }
