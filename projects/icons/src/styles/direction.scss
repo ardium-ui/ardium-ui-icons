@@ -1,0 +1,16 @@
+.ard-icon-input-direction {
+  transition: rotate var(--ard-icons-transition-duration, 0.2s) var(--ard-icons-transition-easing, ease);
+
+  &.down {
+    rotate: 0deg;
+  }
+  &.up {
+    transform: rotate(180deg);
+  }
+  &.left {
+    transform: rotate(90deg);
+  }
+  &.right {
+    transform: rotate(-90deg);
+  }
+}

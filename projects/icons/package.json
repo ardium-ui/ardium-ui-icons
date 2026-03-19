@@ -16,8 +16,8 @@
     "./core.scss": {
       "sass": "./styles/core.scss"
     },
-    "./core.css": {
-      "style": "./styles/core.css"
+    "./direction.scss": {
+      "sass": "./styles/direction.scss"
     }
   }
 }
