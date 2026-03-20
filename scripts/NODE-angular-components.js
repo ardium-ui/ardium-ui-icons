@@ -103,7 +103,7 @@ const specialIcons = [
 
   fsExtra.ensureDirSync(outPath + "outlined/");
   fsExtra.ensureDirSync(outPath + "filled/");
-  
+
   console.log(`- Converting icon files...`);
 
   const exportLines = [];
@@ -113,24 +113,54 @@ const specialIcons = [
   }
 
   console.log(`${OK_STR} Finished converting ${fileNames.length} files`);
-  
+
   console.log(`- Generating special icon files...`);
 
   for (const componentData of specialIcons) {
     const exportLine = createSpecialIconComponent(componentData, changeCase);
     exportLines.push(exportLine);
   }
+  createEnums(changeCase);
 
   console.log(`${OK_STR} Finished generating ${specialIcons.length} files`);
 
   fs.writeFileSync(outPath + "../public-api.ts", exportLines.join("\n"), {
     encoding: "utf-8",
   });
-  
+
   console.log(`${OK_STR} All done!`);
 
   process.exit(0);
 })();
+
+/*
+export const ArdDirection = {
+  Down: 'down',
+  Up: 'up',
+  Left: 'left',
+  Right: 'right',
+} as const;
+export type ArdDirection = typeof ArdDirection[keyof typeof ArdDirection];
+*/
+
+function createEnums(changeCase) {
+  const enumLines = Object.entries(enums)
+    .map(([enumName, values]) => {
+      return [
+        `export const ${enumName} = {`,
+        ...values.map(
+          (value) => `  ${changeCase.pascalCase(value)}: '${value}',`,
+        ),
+        "} as const;",
+        `export type ${enumName} = (typeof ${enumName})[keyof typeof ${enumName}];`,
+      ].join("\n");
+    })
+    .join("\n\n");
+
+  fs.writeFileSync(outPath + "enums.ts", enumLines, {
+    encoding: "utf-8",
+  });
+}
 
 function createSpecialIconComponent(componentData, changeCase) {
   const {
@@ -161,7 +191,7 @@ function createSpecialIconComponent(componentData, changeCase) {
     .join(",\n    ");
 
   const componentSrc = `import { Component, input } from '@angular/core';
-import { ${enumName} } from './enums';
+import { ${enumName} } from '../enums';
 import { ${basedOnComponentName} } from './${basedOn}.icon';
 
 @Component({

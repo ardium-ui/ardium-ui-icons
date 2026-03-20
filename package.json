@@ -7,8 +7,7 @@
     "start-homepage": "ng serve --project=homepage --port=4242",
     "start-data-tool": "ng serve --project=icon-data-tool --port=4243",
     "start-data-tool-server": "tsx projects/icon-data-tool/server/main.ts",
-    "build-homepage": "ng build --project=homepage",
-    "build-deploy": "pnpm build-homepage && cd ./dist/homepage/browser/ && gh-pages --dist . --repo https://github.com/ardium-ui/ardium-ui-icons.git",
+    "build-homepage": "ng build --project=homepage && cd scripts && tsx post-build.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "find-issues": "cd scripts && node NODE-finder.js",
@@ -17,7 +16,7 @@
     "copy-data": "cd scripts && node NODE-copy-to-data-tool.js",
     "verion-icons": "cd projects/icons && npm version",
     "to-angular": "rmdir /s /Q projects/icons/src/lib & cd scripts && node NODE-angular-components.js && cd ../projects/icons",
-    "build-icons": "npm run to-angular && ng build --project=icons --configuration=production && cd ../../ && node ./scripts/NODE-copy-scss.js",
+    "build-icons": "npm run to-angular && ng build --project=icons --configuration=production && node ./scripts/NODE-copy-scss.js",
     "build-publish": "npm run build-icons && cd dist/icons && npm publish && cd ../../"
   },
   "private": true,
