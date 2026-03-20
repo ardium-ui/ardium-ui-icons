@@ -49,6 +49,7 @@
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",
     "@types/jasmine": "~5.1.0",
+    "ansis": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "gh-pages": "^6.1.1",
