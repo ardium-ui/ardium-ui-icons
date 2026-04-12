@@ -1,2 +1,10 @@
 <img [src]="iconSrc()" [alt]="iconData().name" />
-<span>{{ iconData().name | iconDisplayName }}</span>
+<p>
+  @for (part of highlightedNameParts(); track $index) {
+    @if (part.highlighted) {
+      <mark>{{ part.text }}</mark>
+    } @else {
+      <span>{{ part.text }}</span>
+    }
+  }
+</p>

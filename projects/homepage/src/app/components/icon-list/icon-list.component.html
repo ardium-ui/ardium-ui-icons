@@ -12,7 +12,13 @@
   </ng-container>
   <div class="icon-row final-row">
     <p>
-      <small>There are no more icons to show.</small>
+      <small>
+        @if (icons().length === 0) {
+          No icons found.
+        } @else {
+          There are no more icons to show.
+        }
+      </small>
     </p>
   </div>
 </cdk-virtual-scroll-viewport>

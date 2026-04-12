@@ -3,5 +3,16 @@
   <span>Ardium UI Icons</span>
 </div>
 <div class="search-container">
-  <span>Search input here...</span>
+  <ard-input
+    [placeholder]="
+      'Search ' + iconStorageService.currentIconsCount() + ' icons...'
+    "
+    appearance="outlined"
+    clearable
+    (valueChange)="onSearch($event)"
+  >
+    <ng-template ard-prefix-tmp>
+      <ard-icon-search-2 class="search-icon" />
+    </ng-template>
+  </ard-input>
 </div>

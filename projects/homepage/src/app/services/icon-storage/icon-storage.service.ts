@@ -1,16 +1,19 @@
-import { computed, effect, Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { persistentSignal, PersistentStorageMethod } from '@ardium-ui/devkit';
 import { IconCategory } from '@components/category-selector/categories';
+import { matchSorter } from 'match-sorter';
 import { ICON_DATA } from './icon-data';
 import { ICONS_BY_CATEGORY } from './icon-data.computed';
 import { IconType } from './icon-storage.types';
+
+function normalizeSearchTerm(value: string): string {
+  return value.trim().replace(/\s+/g, '-');
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class IconStorageService {
-  private readonly _worker!: { postMessage: (message: string) => void };
-
   readonly selectedType = persistentSignal<IconType | null>(null, {
     method: PersistentStorageMethod.LocalStorage,
     name: 'selectedType',
@@ -22,7 +25,7 @@ export class IconStorageService {
 
   readonly searchTerm = signal<string>('');
 
-  readonly filteredIcons = computed(() => {
+  readonly iconsByCategory = computed(() => {
     const category = this.selectedCategory();
 
     if (!category) {
@@ -30,28 +33,29 @@ export class IconStorageService {
     }
     return ICONS_BY_CATEGORY[category] || [];
   });
+  readonly currentIconsCount = computed(() => this.iconsByCategory().length);
 
-  constructor() {
-    if (typeof Worker !== 'undefined') {
-      const worker = new Worker(
-        new URL('./search-worker.worker', import.meta.url)
-      );
-      worker.onmessage = ({ data }) => {
-        console.log(`page got message: ${data}`);
-      };
-      this._worker = worker;
-    } else {
-      console.warn(
-        'Web Workers are not supported in this environment. Falling back to main thread processing.'
-      );
-
-      // TODO
+  readonly filteredIcons = computed(() => {
+    const searchTerm = normalizeSearchTerm(
+      this.searchTerm()?.toLowerCase() || '',
+    );
+    const icons = this.iconsByCategory();
+    if (!searchTerm) {
+      return icons;
     }
-
-    effect(() => {
-      const type = this.selectedType();
-      const category = this.selectedCategory();
-      const search = this.searchTerm();
+    return matchSorter(icons, searchTerm, {
+      keys: [
+        {
+          key: 'name',
+          maxRanking: matchSorter.rankings.STARTS_WITH,
+          threshold: matchSorter.rankings.MATCHES,
+        },
+        {
+          key: 'tags',
+          maxRanking: matchSorter.rankings.CONTAINS,
+          threshold: matchSorter.rankings.MATCHES,
+        },
+      ],
     });
-  }
+  });
 }

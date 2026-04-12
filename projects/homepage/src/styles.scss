@@ -1,68 +1,84 @@
-@use '../../../node_modules/@ardium-ui/ui/themes/default/core.scss';
+@use "../../../node_modules/@ardium-ui/ui/themes/default/core.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/form-field-frame.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/inputs/input.scss";
 
 :root {
   --header-height: 4rem;
   --border: 1px solid var(--ard-detail-ultralight);
+
+  //! Ardium UI overrides
+  --ard-border: var(--ard-detail-ultralight);
+  --ard-border-dark: var(--ard-detail-light);
+  --ard-text2: rgba(0, 0, 0, 0.75);
+  --ard-text3: rgba(0, 0, 0, 0.6);
+  --ard-text4: rgba(0, 0, 0, 0.4);
+  --ard-font-family: "Inter", sans-serif;
+
+  --ard-form-field-font-size: 0.875rem;
+  --ard-form-field-hover-overlay-opacity: 0;
+  --ard-form-field-focus-overlay-opacity: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  font-family: 'Inter', sans-serif;
-  height: 100%;
-}
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-h2 {
-  font-size: 1.125rem;
-  text-align: center;
-}
-.align-left {
-  text-align: left;
-}
-button,
-a {
-  cursor: pointer;
-}
-.hidden {
-  display: none !important;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    height: 100%;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  h2 {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  .align-left {
+    text-align: left;
+  }
+  button,
+  a {
+    cursor: pointer;
+  }
+  .hidden {
+    display: none !important;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
 }
 
 .ard-icon-outlined,

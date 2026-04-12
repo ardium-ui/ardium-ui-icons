@@ -1,6 +1,7 @@
 import { IconCategory } from '@components/category-selector/categories';
 import { IconData, IconType } from '@services/icon-storage/icon-storage.types';
 
+// prettier-ignore
 export const ICON_DATA: IconData[] = [
   { name: '3g-circle', type: IconType.Outlined, category: IconCategory.Network, tags: ['signal'] },
   { name: '3g-square', type: IconType.Outlined, category: IconCategory.Network, tags: ['signal'] },
@@ -474,8 +475,8 @@ export const ICON_DATA: IconData[] = [
   { name: 'desktop', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'diamond', type: IconType.Outlined, category: IconCategory.Financial, tags: ['gem'] },
   { name: 'document', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file'] },
-  { name: 'document-arrow-down', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: [] },
-  { name: 'document-arrow-up', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: [] },
+  { name: 'document-arrow-down', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file','download'] },
+  { name: 'document-arrow-up', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file','upload'] },
   { name: 'document-check', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file'] },
   { name: 'document-code', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file'] },
   { name: 'document-config', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: ['paper','file'] },
@@ -574,7 +575,6 @@ export const ICON_DATA: IconData[] = [
   { name: 'eye-closed', type: IconType.Outlined, category: IconCategory.Interface, tags: ['visibility','show','hide'] },
   { name: 'eye-off', type: IconType.Outlined, category: IconCategory.Interface, tags: ['visibility','show','hide'] },
   { name: 'fast-food', type: IconType.Outlined, category: IconCategory.Food, tags: [] },
-  { name: 'file-upload', type: IconType.Outlined, category: IconCategory.DocumentsAndFolders, tags: [] },
   { name: 'filter', type: IconType.Outlined, category: IconCategory.FiltersAndSettings, tags: [] },
   { name: 'filter-2', type: IconType.Outlined, category: IconCategory.FiltersAndSettings, tags: [] },
   { name: 'filter-3', type: IconType.Outlined, category: IconCategory.FiltersAndSettings, tags: [] },
@@ -1384,4 +1384,3 @@ export const ICON_DATA: IconData[] = [
   { name: 'zoom-in', type: IconType.Outlined, category: IconCategory.Interface, tags: [] },
   { name: 'zoom-out', type: IconType.Outlined, category: IconCategory.Interface, tags: [] }
 ];
-  
