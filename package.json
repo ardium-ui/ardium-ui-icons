@@ -14,7 +14,7 @@
     "cleanup-icons": "cd scripts && node NODE-cleanuper.js",
     "copy-icons": "cd scripts && tsx NODE-copy-icons-to-homepage.ts",
     "copy-data": "cd scripts && node NODE-copy-to-data-tool.js",
-    "verion-icons": "cd projects/icons && npm version",
+    "version-icons": "cd projects/icons && npm version",
     "to-angular": "rmdir /s /Q projects/icons/src/lib & cd scripts && node NODE-angular-components.js && cd ../projects/icons",
     "build-icons": "npm run to-angular && ng build --project=icons --configuration=production && node ./scripts/NODE-copy-scss.js",
     "build-publish": "npm run build-icons && cd dist/icons && npm publish && cd ../../"
