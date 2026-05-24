@@ -3,8 +3,8 @@
   (click)="onCheckboxClick($event)"
 />
 <img [src]="iconSrc()" [alt]="iconData().name" />
-<div class="name" [cdkCopyToClipboard]="iconData().name | iconDisplayName">
-  {{ iconData().name | iconDisplayName }}
+<div class="name" [cdkCopyToClipboard]="iconData().name">
+  {{ iconData().name }}
 </div>
 <div class="info-container">
   <div [ngClass]="'category category-' + iconData().category">

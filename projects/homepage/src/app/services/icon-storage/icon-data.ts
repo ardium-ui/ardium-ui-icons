@@ -1,7 +1,6 @@
 import { IconCategory } from '@components/category-selector/categories';
 import { IconData, IconType } from '@services/icon-storage/icon-storage.types';
 
-// prettier-ignore
 export const ICON_DATA: IconData[] = [
   { name: '3g-circle', type: IconType.Outlined, category: IconCategory.Network, tags: ['signal'] },
   { name: '3g-square', type: IconType.Outlined, category: IconCategory.Network, tags: ['signal'] },
@@ -843,13 +842,23 @@ export const ICON_DATA: IconData[] = [
   { name: 'mileage', type: IconType.Outlined, category: IconCategory.Vehicles, tags: ['car'] },
   { name: 'minus', type: IconType.Outlined, category: IconCategory.Symbols, tags: ['math','subtract','subtraction'] },
   { name: 'monitor', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
+  { name: 'monitor-1', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-2', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-3', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-4', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
   { name: 'monitor-4k', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
+  { name: 'monitor-5', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-6', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-7', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-8', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
+  { name: 'monitor-9', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
   { name: 'monitor-activity', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-code', type: IconType.Outlined, category: IconCategory.Coding, tags: [] },
   { name: 'monitor-error', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-hd', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-heart', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-info', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
+  { name: 'monitor-left', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
   { name: 'monitor-lock', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-minus', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-music', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
@@ -861,6 +870,7 @@ export const ICON_DATA: IconData[] = [
   { name: 'monitor-refresh', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-reload', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-reload-2', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
+  { name: 'monitor-right', type: IconType.Outlined, category: IconCategory.Computer, tags: ['screen','display'] },
   { name: 'monitor-search', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-star', type: IconType.Outlined, category: IconCategory.Computer, tags: [] },
   { name: 'monitor-terminal', type: IconType.Outlined, category: IconCategory.Coding, tags: [] },
@@ -1384,3 +1394,4 @@ export const ICON_DATA: IconData[] = [
   { name: 'zoom-in', type: IconType.Outlined, category: IconCategory.Interface, tags: [] },
   { name: 'zoom-out', type: IconType.Outlined, category: IconCategory.Interface, tags: [] }
 ];
+  

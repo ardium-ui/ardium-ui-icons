@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, HostListener, input, model, output } from '@angular/core';
 import { ArdiumCheckboxModule, ArdiumIconModule } from '@ardium-ui/ui';
 import { PartialIconData } from 'projects/icon-data-tool/src/app/services/icon-data/partial-icon-data';
-import { IconDisplayNamePipe } from './../../../../../../../homepage/src/app/pipes/icon-display-name.pipe';
 
 @Component({
   selector: 'app-icon-item',
-  imports: [IconDisplayNamePipe, CommonModule, ClipboardModule, ArdiumCheckboxModule, ArdiumIconModule],
+  imports: [CommonModule, ClipboardModule, ArdiumCheckboxModule, ArdiumIconModule],
   templateUrl: './icon-item.component.html',
   styleUrl: './icon-item.component.scss',
   host: {
