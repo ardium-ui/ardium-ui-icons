@@ -63,6 +63,22 @@ const specialIcons = [
     basedOn: "arrow-down",
   },
   {
+    name: "arrow-circle",
+    type: "outlined",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "arrow-down-circle",
+  },
+  {
+    name: "arrow-circle",
+    type: "filled",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "arrow-down-circle",
+  },
+  {
     name: "chevron",
     type: "outlined",
     enum: "ArdDirection",
@@ -77,6 +93,38 @@ const specialIcons = [
     input: "direction",
     default: "Down",
     basedOn: "chevron-double-down",
+  },
+  {
+    name: "chevron-circle",
+    type: "outlined",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "chevron-down-circle",
+  },
+  {
+    name: "chevron-double-circle",
+    type: "outlined",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "chevron-double-down-circle",
+  },
+  {
+    name: "chevron-circle",
+    type: "filled",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "chevron-down-circle",
+  },
+  {
+    name: "chevron-double-circle",
+    type: "filled",
+    enum: "ArdDirection",
+    input: "direction",
+    default: "Down",
+    basedOn: "chevron-double-down-circle",
   },
   {
     name: "chevron-2",
@@ -132,16 +180,6 @@ const specialIcons = [
 
   process.exit(0);
 })();
-
-/*
-export const ArdDirection = {
-  Down: 'down',
-  Up: 'up',
-  Left: 'left',
-  Right: 'right',
-} as const;
-export type ArdDirection = typeof ArdDirection[keyof typeof ArdDirection];
-*/
 
 function createEnums(changeCase) {
   const enumLines = Object.entries(enums)
