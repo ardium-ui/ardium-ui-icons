@@ -2,7 +2,7 @@ import { Component, model } from '@angular/core';
 import {
   ArdIconCircle,
   ArdIconCircleFilled,
-  ArdIconTwoCirclesFilled,
+  ArdIconTwoCirclesDiagonalFilled,
 } from '@ardium-ui/icons';
 import { IconType } from '@services/icon-storage/icon-storage.types';
 import { StyleButtonComponent } from './style-button/style-button.component';
@@ -11,7 +11,7 @@ import { StyleButtonComponent } from './style-button/style-button.component';
   selector: 'app-style-selector',
   imports: [
     StyleButtonComponent,
-    ArdIconTwoCirclesFilled,
+    ArdIconTwoCirclesDiagonalFilled,
     ArdIconCircle,
     ArdIconCircleFilled,
   ],
