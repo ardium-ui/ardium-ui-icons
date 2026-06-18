@@ -4,9 +4,7 @@
 </div>
 <div class="search-container">
   <ard-input
-    [placeholder]="
-      'Search ' + iconStorageService.currentIconsCount() + ' icons...'
-    "
+    [placeholder]="searchPlaceholder()"
     appearance="outlined"
     clearable
     (valueChange)="onSearch($event)"

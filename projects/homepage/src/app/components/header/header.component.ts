@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ArdIconSearch_2 } from "@ardium-ui/icons";
 import { ArdiumInputModule } from '@ardium-ui/ui';
+import { CATEGORY_LABELS } from '@components/category-selector/categories';
 import { IconStorageService } from '@services/icon-storage/icon-storage.service';
 
 @Component({
@@ -12,6 +13,15 @@ import { IconStorageService } from '@services/icon-storage/icon-storage.service'
 })
 export class HeaderComponent {
   readonly iconStorageService = inject(IconStorageService);
+
+  readonly searchPlaceholder = computed(() => {
+    const count = this.iconStorageService.currentIconsCount();
+    const category = this.iconStorageService.selectedCategory();
+    if (!category) {
+      return `Search ${count} icons...`;
+    }
+    return `Search ${CATEGORY_LABELS[category]} (${count}) icons...`;
+  })
 
   onSearch(value: string | null): void {
     this.iconStorageService.searchTerm.set(value || '');

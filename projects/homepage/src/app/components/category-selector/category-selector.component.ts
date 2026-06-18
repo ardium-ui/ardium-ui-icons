@@ -55,7 +55,7 @@ import {
   ArdIconUser,
   ArdIconWifi,
 } from '@ardium-ui/icons';
-import { IconCategory } from './categories';
+import { CATEGORY_LABELS, IconCategory } from './categories';
 import { CategoryButtonComponent } from './category-button/category-button.component';
 
 @Component({
@@ -122,6 +122,7 @@ import { CategoryButtonComponent } from './category-button/category-button.compo
 })
 export class CategorySelectorComponent {
   readonly IconCategory = IconCategory;
+  readonly CATEGORY_LABELS = CATEGORY_LABELS;
   
   readonly totalIcons = input.required<number>();
   readonly categoryCounts = input.required<Record<IconCategory, number>>();

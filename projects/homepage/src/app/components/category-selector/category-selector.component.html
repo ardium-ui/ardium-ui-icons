@@ -7,7 +7,7 @@
   <ard-icon-placeholder />
 </app-category-button>
 <app-category-button
-  label="Alerts"
+  [label]="CATEGORY_LABELS[IconCategory.Alerts]"
   [count]="categoryCounts().alerts"
   (click)="selectedCategory.set(IconCategory.Alerts)"
   [active]="selectedCategory() === IconCategory.Alerts"
@@ -15,7 +15,7 @@
   <ard-icon-alert />
 </app-category-button>
 <app-category-button
-  label="Animals"
+  [label]="CATEGORY_LABELS[IconCategory.Animals]"
   [count]="categoryCounts().animals"
   (click)="selectedCategory.set(IconCategory.Animals)"
   [active]="selectedCategory() === IconCategory.Animals"
@@ -23,7 +23,7 @@
   <ard-icon-dog />
 </app-category-button>
 <app-category-button
-  label="Arrows"
+  [label]="CATEGORY_LABELS[IconCategory.Arrows]"
   [count]="categoryCounts().arrows"
   (click)="selectedCategory.set(IconCategory.Arrows)"
   [active]="selectedCategory() === IconCategory.Arrows"
@@ -31,7 +31,7 @@
   <ard-icon-arrows-swap-vertical />
 </app-category-button>
 <app-category-button
-  label="Audio & Video"
+  [label]="CATEGORY_LABELS[IconCategory.AudioAndVideo]"
   [count]="categoryCounts().audioAndVideo"
   (click)="selectedCategory.set(IconCategory.AudioAndVideo)"
   [active]="selectedCategory() === IconCategory.AudioAndVideo"
@@ -39,7 +39,7 @@
   <ard-icon-headphones />
 </app-category-button>
 <app-category-button
-  label="Banking"
+  [label]="CATEGORY_LABELS[IconCategory.Banking]"
   [count]="categoryCounts().banking"
   (click)="selectedCategory.set(IconCategory.Banking)"
   [active]="selectedCategory() === IconCategory.Banking"
@@ -47,7 +47,7 @@
   <ard-icon-bank-card />
 </app-category-button>
 <app-category-button
-  label="Bathroom"
+  [label]="CATEGORY_LABELS[IconCategory.Bathroom]"
   [count]="categoryCounts().bathroom"
   (click)="selectedCategory.set(IconCategory.Bathroom)"
   [active]="selectedCategory() === IconCategory.Bathroom"
@@ -55,7 +55,7 @@
   <ard-icon-toilet-sign />
 </app-category-button>
 <app-category-button
-  label="Bookmarks"
+  [label]="CATEGORY_LABELS[IconCategory.Bookmarks]"
   [count]="categoryCounts().bookmarks"
   (click)="selectedCategory.set(IconCategory.Bookmarks)"
   [active]="selectedCategory() === IconCategory.Bookmarks"
@@ -63,7 +63,7 @@
   <ard-icon-bookmark />
 </app-category-button>
 <app-category-button
-  label="Brands"
+  [label]="CATEGORY_LABELS[IconCategory.Brands]"
   [count]="categoryCounts().brands"
   (click)="selectedCategory.set(IconCategory.Brands)"
   [active]="selectedCategory() === IconCategory.Brands"
@@ -71,7 +71,7 @@
   <ard-icon-brand-youtube />
 </app-category-button>
 <app-category-button
-  label="Calls"
+  [label]="CATEGORY_LABELS[IconCategory.Calls]"
   [count]="categoryCounts().calls"
   (click)="selectedCategory.set(IconCategory.Calls)"
   [active]="selectedCategory() === IconCategory.Calls"
@@ -79,7 +79,7 @@
   <ard-icon-call />
 </app-category-button>
 <app-category-button
-  label="Charts"
+  [label]="CATEGORY_LABELS[IconCategory.Charts]"
   [count]="categoryCounts().charts"
   (click)="selectedCategory.set(IconCategory.Charts)"
   [active]="selectedCategory() === IconCategory.Charts"
@@ -87,7 +87,7 @@
   <ard-icon-graph-chart />
 </app-category-button>
 <app-category-button
-  label="City"
+  [label]="CATEGORY_LABELS[IconCategory.City]"
   [count]="categoryCounts().city"
   (click)="selectedCategory.set(IconCategory.City)"
   [active]="selectedCategory() === IconCategory.City"
@@ -95,7 +95,7 @@
   <ard-icon-building />
 </app-category-button>
 <app-category-button
-  label="Chats"
+  [label]="CATEGORY_LABELS[IconCategory.Chats]"
   [count]="categoryCounts().chats"
   (click)="selectedCategory.set(IconCategory.Chats)"
   [active]="selectedCategory() === IconCategory.Chats"
@@ -103,7 +103,7 @@
   <ard-icon-chat />
 </app-category-button>
 <app-category-button
-  label="Cloud"
+  [label]="CATEGORY_LABELS[IconCategory.Cloud]"
   [count]="categoryCounts().cloud"
   (click)="selectedCategory.set(IconCategory.Cloud)"
   [active]="selectedCategory() === IconCategory.Cloud"
@@ -111,7 +111,7 @@
   <ard-icon-cloud />
 </app-category-button>
 <app-category-button
-  label="Coding"
+  [label]="CATEGORY_LABELS[IconCategory.Coding]"
   [count]="categoryCounts().coding"
   (click)="selectedCategory.set(IconCategory.Coding)"
   [active]="selectedCategory() === IconCategory.Coding"
@@ -119,7 +119,7 @@
   <ard-icon-code />
 </app-category-button>
 <app-category-button
-  label="Computer"
+  [label]="CATEGORY_LABELS[IconCategory.Computer]"
   [count]="categoryCounts().computer"
   (click)="selectedCategory.set(IconCategory.Computer)"
   [active]="selectedCategory() === IconCategory.Computer"
@@ -127,7 +127,7 @@
   <ard-icon-computer-monitor />
 </app-category-button>
 <app-category-button
-  label="Creative Design"
+  [label]="CATEGORY_LABELS[IconCategory.CreativeDesign]"
   [count]="categoryCounts().creativeDesign"
   (click)="selectedCategory.set(IconCategory.CreativeDesign)"
   [active]="selectedCategory() === IconCategory.CreativeDesign"
@@ -135,7 +135,7 @@
   <ard-icon-color />
 </app-category-button>
 <app-category-button
-  label="DB & Servers"
+  [label]="CATEGORY_LABELS[IconCategory.DatabaseAndServers]"
   [count]="categoryCounts().dbAndServers"
   (click)="selectedCategory.set(IconCategory.DatabaseAndServers)"
   [active]="selectedCategory() === IconCategory.DatabaseAndServers"
@@ -143,7 +143,7 @@
   <ard-icon-database />
 </app-category-button>
 <app-category-button
-  label="Date & Time"
+  [label]="CATEGORY_LABELS[IconCategory.DateAndTime]"
   [count]="categoryCounts().dateAndTime"
   (click)="selectedCategory.set(IconCategory.DateAndTime)"
   [active]="selectedCategory() === IconCategory.DateAndTime"
@@ -151,7 +151,7 @@
   <ard-icon-calendar-dots-2 />
 </app-category-button>
 <app-category-button
-  label="Delivery"
+  [label]="CATEGORY_LABELS[IconCategory.Delivery]"
   [count]="categoryCounts().delivery"
   (click)="selectedCategory.set(IconCategory.Delivery)"
   [active]="selectedCategory() === IconCategory.Delivery"
@@ -159,7 +159,7 @@
   <ard-icon-box />
 </app-category-button>
 <app-category-button
-  label="Devices"
+  [label]="CATEGORY_LABELS[IconCategory.Devices]"
   [count]="categoryCounts().devices"
   (click)="selectedCategory.set(IconCategory.Devices)"
   [active]="selectedCategory() === IconCategory.Devices"
@@ -167,7 +167,7 @@
   <ard-icon-calculator />
 </app-category-button>
 <app-category-button
-  label="Files & Folders"
+  [label]="CATEGORY_LABELS[IconCategory.DocumentsAndFolders]"
   [count]="categoryCounts().docsAndFolders"
   (click)="selectedCategory.set(IconCategory.DocumentsAndFolders)"
   [active]="selectedCategory() === IconCategory.DocumentsAndFolders"
@@ -175,7 +175,7 @@
   <ard-icon-document />
 </app-category-button>
 <app-category-button
-  label="Electricity"
+  [label]="CATEGORY_LABELS[IconCategory.Electricity]"
   [count]="categoryCounts().electricity"
   (click)="selectedCategory.set(IconCategory.Electricity)"
   [active]="selectedCategory() === IconCategory.Electricity"
@@ -183,7 +183,7 @@
   <ard-icon-electricity />
 </app-category-button>
 <app-category-button
-  label="Emojis"
+  [label]="CATEGORY_LABELS[IconCategory.Emojis]"
   [count]="categoryCounts().emojis"
   (click)="selectedCategory.set(IconCategory.Emojis)"
   [active]="selectedCategory() === IconCategory.Emojis"
@@ -191,7 +191,7 @@
   <ard-icon-emoji />
 </app-category-button>
 <app-category-button
-  label="Festive"
+  [label]="CATEGORY_LABELS[IconCategory.Festive]"
   [count]="categoryCounts().festive"
   (click)="selectedCategory.set(IconCategory.Festive)"
   [active]="selectedCategory() === IconCategory.Festive"
@@ -199,7 +199,7 @@
   <ard-icon-gift />
 </app-category-button>
 <app-category-button
-  label="Filters & Settings"
+  [label]="CATEGORY_LABELS[IconCategory.FiltersAndSettings]"
   [count]="categoryCounts().filtersAndSettings"
   (click)="selectedCategory.set(IconCategory.FiltersAndSettings)"
   [active]="selectedCategory() === IconCategory.FiltersAndSettings"
@@ -207,7 +207,7 @@
   <ard-icon-settings />
 </app-category-button>
 <app-category-button
-  label="Financial"
+  [label]="CATEGORY_LABELS[IconCategory.Financial]"
   [count]="categoryCounts().financial"
   (click)="selectedCategory.set(IconCategory.Financial)"
   [active]="selectedCategory() === IconCategory.Financial"
@@ -215,7 +215,7 @@
   <ard-icon-coins />
 </app-category-button>
 <app-category-button
-  label="Food"
+  [label]="CATEGORY_LABELS[IconCategory.Food]"
   [count]="categoryCounts().food"
   (click)="selectedCategory.set(IconCategory.Food)"
   [active]="selectedCategory() === IconCategory.Food"
@@ -223,7 +223,7 @@
   <ard-icon-burger />
 </app-category-button>
 <app-category-button
-  label="Games"
+  [label]="CATEGORY_LABELS[IconCategory.Games]"
   [count]="categoryCounts().games"
   (click)="selectedCategory.set(IconCategory.Games)"
   [active]="selectedCategory() === IconCategory.Games"
@@ -231,7 +231,7 @@
   <ard-icon-game-controller />
 </app-category-button>
 <app-category-button
-  label="Gestures"
+  [label]="CATEGORY_LABELS[IconCategory.Gestures]"
   [count]="categoryCounts().gestures"
   (click)="selectedCategory.set(IconCategory.Gestures)"
   [active]="selectedCategory() === IconCategory.Gestures"
@@ -239,7 +239,7 @@
   <!-- <ard-icon-gesture /> -->
 </app-category-button>
 <app-category-button
-  label="Health"
+  [label]="CATEGORY_LABELS[IconCategory.Health]"
   [count]="categoryCounts().health"
   (click)="selectedCategory.set(IconCategory.Health)"
   [active]="selectedCategory() === IconCategory.Health"
@@ -247,7 +247,7 @@
   <ard-icon-health-plus />
 </app-category-button>
 <app-category-button
-  label="Hearts"
+  [label]="CATEGORY_LABELS[IconCategory.Hearts]"
   [count]="categoryCounts().hearts"
   (click)="selectedCategory.set(IconCategory.Hearts)"
   [active]="selectedCategory() === IconCategory.Hearts"
@@ -255,7 +255,7 @@
   <ard-icon-heart-2 />
 </app-category-button>
 <app-category-button
-  label="Home"
+  [label]="CATEGORY_LABELS[IconCategory.Home]"
   [count]="categoryCounts().home"
   (click)="selectedCategory.set(IconCategory.Home)"
   [active]="selectedCategory() === IconCategory.Home"
@@ -263,7 +263,7 @@
   <ard-icon-bed-double />
 </app-category-button>
 <app-category-button
-  label="Interface"
+  [label]="CATEGORY_LABELS[IconCategory.Interface]"
   [count]="categoryCounts().interface"
   (click)="selectedCategory.set(IconCategory.Interface)"
   [active]="selectedCategory() === IconCategory.Interface"
@@ -271,7 +271,7 @@
   <ard-icon-button-cursor />
 </app-category-button>
 <app-category-button
-  label="Kitchen"
+  [label]="CATEGORY_LABELS[IconCategory.Kitchen]"
   [count]="categoryCounts().kitchen"
   (click)="selectedCategory.set(IconCategory.Kitchen)"
   [active]="selectedCategory() === IconCategory.Kitchen"
@@ -279,7 +279,7 @@
   <ard-icon-oven />
 </app-category-button>
 <app-category-button
-  label="Mail"
+  [label]="CATEGORY_LABELS[IconCategory.Mail]"
   [count]="categoryCounts().mail"
   (click)="selectedCategory.set(IconCategory.Mail)"
   [active]="selectedCategory() === IconCategory.Mail"
@@ -287,7 +287,7 @@
   <ard-icon-envelope />
 </app-category-button>
 <app-category-button
-  label="Maps"
+  [label]="CATEGORY_LABELS[IconCategory.Maps]"
   [count]="categoryCounts().maps"
   (click)="selectedCategory.set(IconCategory.Maps)"
   [active]="selectedCategory() === IconCategory.Maps"
@@ -295,7 +295,7 @@
   <ard-icon-location-pin />
 </app-category-button>
 <app-category-button
-  label="Nature"
+  [label]="CATEGORY_LABELS[IconCategory.Nature]"
   [count]="categoryCounts().nature"
   (click)="selectedCategory.set(IconCategory.Nature)"
   [active]="selectedCategory() === IconCategory.Nature"
@@ -303,7 +303,7 @@
   <ard-icon-tree-coniferous />
 </app-category-button>
 <app-category-button
-  label="Network"
+  [label]="CATEGORY_LABELS[IconCategory.Network]"
   [count]="categoryCounts().network"
   (click)="selectedCategory.set(IconCategory.Network)"
   [active]="selectedCategory() === IconCategory.Network"
@@ -311,7 +311,7 @@
   <ard-icon-wifi />
 </app-category-button>
 <app-category-button
-  label="Photos"
+  [label]="CATEGORY_LABELS[IconCategory.Photos]"
   [count]="categoryCounts().photos"
   (click)="selectedCategory.set(IconCategory.Photos)"
   [active]="selectedCategory() === IconCategory.Photos"
@@ -319,7 +319,7 @@
   <ard-icon-image />
 </app-category-button>
 <app-category-button
-  label="School"
+  [label]="CATEGORY_LABELS[IconCategory.School]"
   [count]="categoryCounts().school"
   (click)="selectedCategory.set(IconCategory.School)"
   [active]="selectedCategory() === IconCategory.School"
@@ -327,7 +327,7 @@
   <ard-icon-graduation-cap-2 />
 </app-category-button>
 <app-category-button
-  label="Search & Scan"
+  [label]="CATEGORY_LABELS[IconCategory.SearchAndScan]"
   [count]="categoryCounts().searchAndScan"
   (click)="selectedCategory.set(IconCategory.SearchAndScan)"
   [active]="selectedCategory() === IconCategory.SearchAndScan"
@@ -335,7 +335,7 @@
   <ard-icon-search-2 />
 </app-category-button>
 <app-category-button
-  label="Security"
+  [label]="CATEGORY_LABELS[IconCategory.Security]"
   [count]="categoryCounts().security"
   (click)="selectedCategory.set(IconCategory.Security)"
   [active]="selectedCategory() === IconCategory.Security"
@@ -343,7 +343,7 @@
   <ard-icon-shield />
 </app-category-button>
 <app-category-button
-  label="Shapes"
+  [label]="CATEGORY_LABELS[IconCategory.Shapes]"
   [count]="categoryCounts().shapes"
   (click)="selectedCategory.set(IconCategory.Shapes)"
   [active]="selectedCategory() === IconCategory.Shapes"
@@ -351,7 +351,7 @@
   <ard-icon-pentagon />
 </app-category-button>
 <app-category-button
-  label="Shopping"
+  [label]="CATEGORY_LABELS[IconCategory.Shopping]"
   [count]="categoryCounts().shopping"
   (click)="selectedCategory.set(IconCategory.Shopping)"
   [active]="selectedCategory() === IconCategory.Shopping"
@@ -359,7 +359,7 @@
   <ard-icon-shopping-cart />
 </app-category-button>
 <app-category-button
-  label="Space & Stars"
+  [label]="CATEGORY_LABELS[IconCategory.SpaceAndStars]"
   [count]="categoryCounts().spaceAndStars"
   (click)="selectedCategory.set(IconCategory.SpaceAndStars)"
   [active]="selectedCategory() === IconCategory.SpaceAndStars"
@@ -367,7 +367,7 @@
   <ard-icon-star />
 </app-category-button>
 <app-category-button
-  label="Sports"
+  [label]="CATEGORY_LABELS[IconCategory.Sports]"
   [count]="categoryCounts().sports"
   (click)="selectedCategory.set(IconCategory.Sports)"
   [active]="selectedCategory() === IconCategory.Sports"
@@ -375,7 +375,7 @@
   <ard-icon-ball-american-football />
 </app-category-button>
 <app-category-button
-  label="Symbols"
+  [label]="CATEGORY_LABELS[IconCategory.Symbols]"
   [count]="categoryCounts().symbols"
   (click)="selectedCategory.set(IconCategory.Symbols)"
   [active]="selectedCategory() === IconCategory.Symbols"
@@ -383,7 +383,7 @@
   <ard-icon-infinity />
 </app-category-button>
 <app-category-button
-  label="Tags"
+  [label]="CATEGORY_LABELS[IconCategory.Tags]"
   [count]="categoryCounts().tags"
   (click)="selectedCategory.set(IconCategory.Tags)"
   [active]="selectedCategory() === IconCategory.Tags"
@@ -391,7 +391,7 @@
   <ard-icon-tag />
 </app-category-button>
 <app-category-button
-  label="Text & Numbers"
+  [label]="CATEGORY_LABELS[IconCategory.TextAndNumbers]"
   [count]="categoryCounts().textAndNumbers"
   (click)="selectedCategory.set(IconCategory.TextAndNumbers)"
   [active]="selectedCategory() === IconCategory.TextAndNumbers"
@@ -399,7 +399,7 @@
   <ard-icon-text />
 </app-category-button>
 <app-category-button
-  label="Tickets"
+  [label]="CATEGORY_LABELS[IconCategory.Tickets]"
   [count]="categoryCounts().tickets"
   (click)="selectedCategory.set(IconCategory.Tickets)"
   [active]="selectedCategory() === IconCategory.Tickets"
@@ -407,7 +407,7 @@
   <ard-icon-ticket />
 </app-category-button>
 <app-category-button
-  label="Travel"
+  [label]="CATEGORY_LABELS[IconCategory.Travel]"
   [count]="categoryCounts().travel"
   (click)="selectedCategory.set(IconCategory.Travel)"
   [active]="selectedCategory() === IconCategory.Travel"
@@ -415,7 +415,7 @@
   <ard-icon-baggage />
 </app-category-button>
 <app-category-button
-  label="User"
+  [label]="CATEGORY_LABELS[IconCategory.User]"
   [count]="categoryCounts().user"
   (click)="selectedCategory.set(IconCategory.User)"
   [active]="selectedCategory() === IconCategory.User"
@@ -423,7 +423,7 @@
   <ard-icon-user />
 </app-category-button>
 <app-category-button
-  label="Vehicles"
+  [label]="CATEGORY_LABELS[IconCategory.Vehicles]"
   [count]="categoryCounts().vehicles"
   (click)="selectedCategory.set(IconCategory.Vehicles)"
   [active]="selectedCategory() === IconCategory.Vehicles"
@@ -431,7 +431,7 @@
   <ard-icon-bus-front />
 </app-category-button>
 <app-category-button
-  label="Weather"
+  [label]="CATEGORY_LABELS[IconCategory.Weather]"
   [count]="categoryCounts().weather"
   (click)="selectedCategory.set(IconCategory.Weather)"
   [active]="selectedCategory() === IconCategory.Weather"
