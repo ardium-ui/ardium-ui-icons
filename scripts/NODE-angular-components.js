@@ -213,10 +213,12 @@ function createSpecialIconComponent(componentData, changeCase) {
   const implicitTypeString = type === "outlined" ? "" : type;
   const selector =
     "ard-icon-" + changeCase.kebabCase(`${name} ${implicitTypeString}`);
-  const componentName =
+    const componentName =
     "ArdIcon" + changeCase.pascalCase(`${name} ${implicitTypeString}`);
-  const enumValues = enums[enumName];
-
+    const enumValues = enums[enumName];
+    
+    const basedOnSelector =
+      "ard-icon-" + changeCase.kebabCase(`${basedOn} ${implicitTypeString}`);
   const basedOnComponentName =
     "ArdIcon" + changeCase.pascalCase(`${basedOn} ${implicitTypeString}`);
 
@@ -235,7 +237,7 @@ import { ${basedOnComponentName} } from './${basedOn}.icon';
 @Component({
   selector: '${selector}',
   standalone: true,
-  template: '<ard-icon-${basedOn} />',
+  template: '<${basedOnSelector} />',
   host: {
     class: 'ard-icon-${type} ard-icon-input-${input}',
     ${hostClasses}

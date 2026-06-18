@@ -1,10 +1,12 @@
 <div class="sidebar-section">
   <div class="sidebar-heading">Style</div>
-  <p>Style selector here...</p>
+  <app-style-selector [(selectedStyle)]="iconStorageService.selectedType" />
 </div>
 <div class="sidebar-section">
   <div class="sidebar-heading">Categories</div>
   <app-category-selector
     [(selectedCategory)]="iconStorageService.selectedCategory"
+    [totalIcons]="iconStorageService.typeTotalCount()"
+    [categoryCounts]="iconStorageService.typeCategoryCounts()"
   />
 </div>

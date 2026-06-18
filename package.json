@@ -31,7 +31,7 @@
     "@angular/platform-browser-dynamic": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@ardium-ui/devkit": "8.0.2-alpha.3",
-    "@ardium-ui/icons": "^0.0.1",
+    "@ardium-ui/icons": "^0.2.0",
     "@ardium-ui/ui": "5.0.0-alpha.92",
     "case": "^1.6.3",
     "change-case": "^5.4.4",

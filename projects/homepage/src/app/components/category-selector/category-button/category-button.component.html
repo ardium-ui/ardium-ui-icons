@@ -1,4 +1,4 @@
-<button [class.active]="active()">
+<button [class.active]="active()" [disabled]="count() === 0">
   <div class="label-and-icon">
     <div class="icon">
       <ng-content />

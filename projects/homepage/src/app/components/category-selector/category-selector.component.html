@@ -1,6 +1,6 @@
 <app-category-button
   label="All"
-  [count]="totalIcons"
+  [count]="totalIcons()"
   (click)="selectedCategory.set(null)"
   [active]="selectedCategory() === null"
 >
@@ -8,7 +8,7 @@
 </app-category-button>
 <app-category-button
   label="Alerts"
-  [count]="categoryCounts.alerts"
+  [count]="categoryCounts().alerts"
   (click)="selectedCategory.set(IconCategory.Alerts)"
   [active]="selectedCategory() === IconCategory.Alerts"
 >
@@ -16,7 +16,7 @@
 </app-category-button>
 <app-category-button
   label="Animals"
-  [count]="categoryCounts.animals"
+  [count]="categoryCounts().animals"
   (click)="selectedCategory.set(IconCategory.Animals)"
   [active]="selectedCategory() === IconCategory.Animals"
 >
@@ -24,7 +24,7 @@
 </app-category-button>
 <app-category-button
   label="Arrows"
-  [count]="categoryCounts.arrows"
+  [count]="categoryCounts().arrows"
   (click)="selectedCategory.set(IconCategory.Arrows)"
   [active]="selectedCategory() === IconCategory.Arrows"
 >
@@ -32,7 +32,7 @@
 </app-category-button>
 <app-category-button
   label="Audio & Video"
-  [count]="categoryCounts.audioAndVideo"
+  [count]="categoryCounts().audioAndVideo"
   (click)="selectedCategory.set(IconCategory.AudioAndVideo)"
   [active]="selectedCategory() === IconCategory.AudioAndVideo"
 >
@@ -40,7 +40,7 @@
 </app-category-button>
 <app-category-button
   label="Banking"
-  [count]="categoryCounts.banking"
+  [count]="categoryCounts().banking"
   (click)="selectedCategory.set(IconCategory.Banking)"
   [active]="selectedCategory() === IconCategory.Banking"
 >
@@ -48,7 +48,7 @@
 </app-category-button>
 <app-category-button
   label="Bathroom"
-  [count]="categoryCounts.bathroom"
+  [count]="categoryCounts().bathroom"
   (click)="selectedCategory.set(IconCategory.Bathroom)"
   [active]="selectedCategory() === IconCategory.Bathroom"
 >
@@ -56,7 +56,7 @@
 </app-category-button>
 <app-category-button
   label="Bookmarks"
-  [count]="categoryCounts.bookmarks"
+  [count]="categoryCounts().bookmarks"
   (click)="selectedCategory.set(IconCategory.Bookmarks)"
   [active]="selectedCategory() === IconCategory.Bookmarks"
 >
@@ -64,7 +64,7 @@
 </app-category-button>
 <app-category-button
   label="Brands"
-  [count]="categoryCounts.brands"
+  [count]="categoryCounts().brands"
   (click)="selectedCategory.set(IconCategory.Brands)"
   [active]="selectedCategory() === IconCategory.Brands"
 >
@@ -72,7 +72,7 @@
 </app-category-button>
 <app-category-button
   label="Calls"
-  [count]="categoryCounts.calls"
+  [count]="categoryCounts().calls"
   (click)="selectedCategory.set(IconCategory.Calls)"
   [active]="selectedCategory() === IconCategory.Calls"
 >
@@ -80,7 +80,7 @@
 </app-category-button>
 <app-category-button
   label="Charts"
-  [count]="categoryCounts.charts"
+  [count]="categoryCounts().charts"
   (click)="selectedCategory.set(IconCategory.Charts)"
   [active]="selectedCategory() === IconCategory.Charts"
 >
@@ -88,7 +88,7 @@
 </app-category-button>
 <app-category-button
   label="City"
-  [count]="categoryCounts.city"
+  [count]="categoryCounts().city"
   (click)="selectedCategory.set(IconCategory.City)"
   [active]="selectedCategory() === IconCategory.City"
 >
@@ -96,7 +96,7 @@
 </app-category-button>
 <app-category-button
   label="Chats"
-  [count]="categoryCounts.chats"
+  [count]="categoryCounts().chats"
   (click)="selectedCategory.set(IconCategory.Chats)"
   [active]="selectedCategory() === IconCategory.Chats"
 >
@@ -104,7 +104,7 @@
 </app-category-button>
 <app-category-button
   label="Cloud"
-  [count]="categoryCounts.cloud"
+  [count]="categoryCounts().cloud"
   (click)="selectedCategory.set(IconCategory.Cloud)"
   [active]="selectedCategory() === IconCategory.Cloud"
 >
@@ -112,7 +112,7 @@
 </app-category-button>
 <app-category-button
   label="Coding"
-  [count]="categoryCounts.coding"
+  [count]="categoryCounts().coding"
   (click)="selectedCategory.set(IconCategory.Coding)"
   [active]="selectedCategory() === IconCategory.Coding"
 >
@@ -120,7 +120,7 @@
 </app-category-button>
 <app-category-button
   label="Computer"
-  [count]="categoryCounts.computer"
+  [count]="categoryCounts().computer"
   (click)="selectedCategory.set(IconCategory.Computer)"
   [active]="selectedCategory() === IconCategory.Computer"
 >
@@ -128,7 +128,7 @@
 </app-category-button>
 <app-category-button
   label="Creative Design"
-  [count]="categoryCounts.creativeDesign"
+  [count]="categoryCounts().creativeDesign"
   (click)="selectedCategory.set(IconCategory.CreativeDesign)"
   [active]="selectedCategory() === IconCategory.CreativeDesign"
 >
@@ -136,7 +136,7 @@
 </app-category-button>
 <app-category-button
   label="DB & Servers"
-  [count]="categoryCounts.dbAndServers"
+  [count]="categoryCounts().dbAndServers"
   (click)="selectedCategory.set(IconCategory.DatabaseAndServers)"
   [active]="selectedCategory() === IconCategory.DatabaseAndServers"
 >
@@ -144,7 +144,7 @@
 </app-category-button>
 <app-category-button
   label="Date & Time"
-  [count]="categoryCounts.dateAndTime"
+  [count]="categoryCounts().dateAndTime"
   (click)="selectedCategory.set(IconCategory.DateAndTime)"
   [active]="selectedCategory() === IconCategory.DateAndTime"
 >
@@ -152,7 +152,7 @@
 </app-category-button>
 <app-category-button
   label="Delivery"
-  [count]="categoryCounts.delivery"
+  [count]="categoryCounts().delivery"
   (click)="selectedCategory.set(IconCategory.Delivery)"
   [active]="selectedCategory() === IconCategory.Delivery"
 >
@@ -160,7 +160,7 @@
 </app-category-button>
 <app-category-button
   label="Devices"
-  [count]="categoryCounts.devices"
+  [count]="categoryCounts().devices"
   (click)="selectedCategory.set(IconCategory.Devices)"
   [active]="selectedCategory() === IconCategory.Devices"
 >
@@ -168,7 +168,7 @@
 </app-category-button>
 <app-category-button
   label="Files & Folders"
-  [count]="categoryCounts.docsAndFolders"
+  [count]="categoryCounts().docsAndFolders"
   (click)="selectedCategory.set(IconCategory.DocumentsAndFolders)"
   [active]="selectedCategory() === IconCategory.DocumentsAndFolders"
 >
@@ -176,7 +176,7 @@
 </app-category-button>
 <app-category-button
   label="Electricity"
-  [count]="categoryCounts.electricity"
+  [count]="categoryCounts().electricity"
   (click)="selectedCategory.set(IconCategory.Electricity)"
   [active]="selectedCategory() === IconCategory.Electricity"
 >
@@ -184,7 +184,7 @@
 </app-category-button>
 <app-category-button
   label="Emojis"
-  [count]="categoryCounts.emojis"
+  [count]="categoryCounts().emojis"
   (click)="selectedCategory.set(IconCategory.Emojis)"
   [active]="selectedCategory() === IconCategory.Emojis"
 >
@@ -192,7 +192,7 @@
 </app-category-button>
 <app-category-button
   label="Festive"
-  [count]="categoryCounts.festive"
+  [count]="categoryCounts().festive"
   (click)="selectedCategory.set(IconCategory.Festive)"
   [active]="selectedCategory() === IconCategory.Festive"
 >
@@ -200,7 +200,7 @@
 </app-category-button>
 <app-category-button
   label="Filters & Settings"
-  [count]="categoryCounts.filtersAndSettings"
+  [count]="categoryCounts().filtersAndSettings"
   (click)="selectedCategory.set(IconCategory.FiltersAndSettings)"
   [active]="selectedCategory() === IconCategory.FiltersAndSettings"
 >
@@ -208,7 +208,7 @@
 </app-category-button>
 <app-category-button
   label="Financial"
-  [count]="categoryCounts.financial"
+  [count]="categoryCounts().financial"
   (click)="selectedCategory.set(IconCategory.Financial)"
   [active]="selectedCategory() === IconCategory.Financial"
 >
@@ -216,7 +216,7 @@
 </app-category-button>
 <app-category-button
   label="Food"
-  [count]="categoryCounts.food"
+  [count]="categoryCounts().food"
   (click)="selectedCategory.set(IconCategory.Food)"
   [active]="selectedCategory() === IconCategory.Food"
 >
@@ -224,7 +224,7 @@
 </app-category-button>
 <app-category-button
   label="Games"
-  [count]="categoryCounts.games"
+  [count]="categoryCounts().games"
   (click)="selectedCategory.set(IconCategory.Games)"
   [active]="selectedCategory() === IconCategory.Games"
 >
@@ -232,7 +232,7 @@
 </app-category-button>
 <app-category-button
   label="Gestures"
-  [count]="categoryCounts.gestures"
+  [count]="categoryCounts().gestures"
   (click)="selectedCategory.set(IconCategory.Gestures)"
   [active]="selectedCategory() === IconCategory.Gestures"
 >
@@ -240,7 +240,7 @@
 </app-category-button>
 <app-category-button
   label="Health"
-  [count]="categoryCounts.health"
+  [count]="categoryCounts().health"
   (click)="selectedCategory.set(IconCategory.Health)"
   [active]="selectedCategory() === IconCategory.Health"
 >
@@ -248,7 +248,7 @@
 </app-category-button>
 <app-category-button
   label="Hearts"
-  [count]="categoryCounts.hearts"
+  [count]="categoryCounts().hearts"
   (click)="selectedCategory.set(IconCategory.Hearts)"
   [active]="selectedCategory() === IconCategory.Hearts"
 >
@@ -256,7 +256,7 @@
 </app-category-button>
 <app-category-button
   label="Home"
-  [count]="categoryCounts.home"
+  [count]="categoryCounts().home"
   (click)="selectedCategory.set(IconCategory.Home)"
   [active]="selectedCategory() === IconCategory.Home"
 >
@@ -264,7 +264,7 @@
 </app-category-button>
 <app-category-button
   label="Interface"
-  [count]="categoryCounts.interface"
+  [count]="categoryCounts().interface"
   (click)="selectedCategory.set(IconCategory.Interface)"
   [active]="selectedCategory() === IconCategory.Interface"
 >
@@ -272,7 +272,7 @@
 </app-category-button>
 <app-category-button
   label="Kitchen"
-  [count]="categoryCounts.kitchen"
+  [count]="categoryCounts().kitchen"
   (click)="selectedCategory.set(IconCategory.Kitchen)"
   [active]="selectedCategory() === IconCategory.Kitchen"
 >
@@ -280,7 +280,7 @@
 </app-category-button>
 <app-category-button
   label="Mail"
-  [count]="categoryCounts.mail"
+  [count]="categoryCounts().mail"
   (click)="selectedCategory.set(IconCategory.Mail)"
   [active]="selectedCategory() === IconCategory.Mail"
 >
@@ -288,7 +288,7 @@
 </app-category-button>
 <app-category-button
   label="Maps"
-  [count]="categoryCounts.maps"
+  [count]="categoryCounts().maps"
   (click)="selectedCategory.set(IconCategory.Maps)"
   [active]="selectedCategory() === IconCategory.Maps"
 >
@@ -296,7 +296,7 @@
 </app-category-button>
 <app-category-button
   label="Nature"
-  [count]="categoryCounts.nature"
+  [count]="categoryCounts().nature"
   (click)="selectedCategory.set(IconCategory.Nature)"
   [active]="selectedCategory() === IconCategory.Nature"
 >
@@ -304,7 +304,7 @@
 </app-category-button>
 <app-category-button
   label="Network"
-  [count]="categoryCounts.network"
+  [count]="categoryCounts().network"
   (click)="selectedCategory.set(IconCategory.Network)"
   [active]="selectedCategory() === IconCategory.Network"
 >
@@ -312,7 +312,7 @@
 </app-category-button>
 <app-category-button
   label="Photos"
-  [count]="categoryCounts.photos"
+  [count]="categoryCounts().photos"
   (click)="selectedCategory.set(IconCategory.Photos)"
   [active]="selectedCategory() === IconCategory.Photos"
 >
@@ -320,7 +320,7 @@
 </app-category-button>
 <app-category-button
   label="School"
-  [count]="categoryCounts.school"
+  [count]="categoryCounts().school"
   (click)="selectedCategory.set(IconCategory.School)"
   [active]="selectedCategory() === IconCategory.School"
 >
@@ -328,7 +328,7 @@
 </app-category-button>
 <app-category-button
   label="Search & Scan"
-  [count]="categoryCounts.searchAndScan"
+  [count]="categoryCounts().searchAndScan"
   (click)="selectedCategory.set(IconCategory.SearchAndScan)"
   [active]="selectedCategory() === IconCategory.SearchAndScan"
 >
@@ -336,7 +336,7 @@
 </app-category-button>
 <app-category-button
   label="Security"
-  [count]="categoryCounts.security"
+  [count]="categoryCounts().security"
   (click)="selectedCategory.set(IconCategory.Security)"
   [active]="selectedCategory() === IconCategory.Security"
 >
@@ -344,7 +344,7 @@
 </app-category-button>
 <app-category-button
   label="Shapes"
-  [count]="categoryCounts.shapes"
+  [count]="categoryCounts().shapes"
   (click)="selectedCategory.set(IconCategory.Shapes)"
   [active]="selectedCategory() === IconCategory.Shapes"
 >
@@ -352,7 +352,7 @@
 </app-category-button>
 <app-category-button
   label="Shopping"
-  [count]="categoryCounts.shopping"
+  [count]="categoryCounts().shopping"
   (click)="selectedCategory.set(IconCategory.Shopping)"
   [active]="selectedCategory() === IconCategory.Shopping"
 >
@@ -360,7 +360,7 @@
 </app-category-button>
 <app-category-button
   label="Space & Stars"
-  [count]="categoryCounts.spaceAndStars"
+  [count]="categoryCounts().spaceAndStars"
   (click)="selectedCategory.set(IconCategory.SpaceAndStars)"
   [active]="selectedCategory() === IconCategory.SpaceAndStars"
 >
@@ -368,7 +368,7 @@
 </app-category-button>
 <app-category-button
   label="Sports"
-  [count]="categoryCounts.sports"
+  [count]="categoryCounts().sports"
   (click)="selectedCategory.set(IconCategory.Sports)"
   [active]="selectedCategory() === IconCategory.Sports"
 >
@@ -376,7 +376,7 @@
 </app-category-button>
 <app-category-button
   label="Symbols"
-  [count]="categoryCounts.symbols"
+  [count]="categoryCounts().symbols"
   (click)="selectedCategory.set(IconCategory.Symbols)"
   [active]="selectedCategory() === IconCategory.Symbols"
 >
@@ -384,7 +384,7 @@
 </app-category-button>
 <app-category-button
   label="Tags"
-  [count]="categoryCounts.tags"
+  [count]="categoryCounts().tags"
   (click)="selectedCategory.set(IconCategory.Tags)"
   [active]="selectedCategory() === IconCategory.Tags"
 >
@@ -392,7 +392,7 @@
 </app-category-button>
 <app-category-button
   label="Text & Numbers"
-  [count]="categoryCounts.textAndNumbers"
+  [count]="categoryCounts().textAndNumbers"
   (click)="selectedCategory.set(IconCategory.TextAndNumbers)"
   [active]="selectedCategory() === IconCategory.TextAndNumbers"
 >
@@ -400,7 +400,7 @@
 </app-category-button>
 <app-category-button
   label="Tickets"
-  [count]="categoryCounts.tickets"
+  [count]="categoryCounts().tickets"
   (click)="selectedCategory.set(IconCategory.Tickets)"
   [active]="selectedCategory() === IconCategory.Tickets"
 >
@@ -408,7 +408,7 @@
 </app-category-button>
 <app-category-button
   label="Travel"
-  [count]="categoryCounts.travel"
+  [count]="categoryCounts().travel"
   (click)="selectedCategory.set(IconCategory.Travel)"
   [active]="selectedCategory() === IconCategory.Travel"
 >
@@ -416,7 +416,7 @@
 </app-category-button>
 <app-category-button
   label="User"
-  [count]="categoryCounts.user"
+  [count]="categoryCounts().user"
   (click)="selectedCategory.set(IconCategory.User)"
   [active]="selectedCategory() === IconCategory.User"
 >
@@ -424,7 +424,7 @@
 </app-category-button>
 <app-category-button
   label="Vehicles"
-  [count]="categoryCounts.vehicles"
+  [count]="categoryCounts().vehicles"
   (click)="selectedCategory.set(IconCategory.Vehicles)"
   [active]="selectedCategory() === IconCategory.Vehicles"
 >
@@ -432,7 +432,7 @@
 </app-category-button>
 <app-category-button
   label="Weather"
-  [count]="categoryCounts.weather"
+  [count]="categoryCounts().weather"
   (click)="selectedCategory.set(IconCategory.Weather)"
   [active]="selectedCategory() === IconCategory.Weather"
 >

@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 import {
   ArdIconAlert,
   ArdIconArrowsSwapVertical,
@@ -55,10 +55,6 @@ import {
   ArdIconUser,
   ArdIconWifi,
 } from '@ardium-ui/icons';
-import {
-  ICON_CATEGORY_COUNTS,
-  TOTAL_ICONS,
-} from '@services/icon-storage/icon-data.computed';
 import { IconCategory } from './categories';
 import { CategoryButtonComponent } from './category-button/category-button.component';
 
@@ -126,8 +122,8 @@ import { CategoryButtonComponent } from './category-button/category-button.compo
 })
 export class CategorySelectorComponent {
   readonly IconCategory = IconCategory;
-  readonly totalIcons = TOTAL_ICONS;
-  readonly categoryCounts = ICON_CATEGORY_COUNTS;
-
+  
+  readonly totalIcons = input.required<number>();
+  readonly categoryCounts = input.required<Record<IconCategory, number>>();
   readonly selectedCategory = model.required<IconCategory | null>();
 }
