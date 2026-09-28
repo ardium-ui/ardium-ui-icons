@@ -1,19 +1,19 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
-<g>
-	<path class="st0" d="M8.8,8.3c0.8-2.4,3.1-4.1,5.7-4.1c3.3,0,6,2.7,6,6c0,2.4-1.4,4.5-3.4,5.4"/>
-	<line class="st0" x1="10.9" y1="14.5" x2="10.3" y2="15.9"/>
-	<line class="st0" x1="14.5" y1="14.5" x2="13.9" y2="15.9"/>
-	<line class="st0" x1="7.7" y1="18.4" x2="7.1" y2="19.8"/>
-	<line class="st0" x1="11.7" y1="18.4" x2="11.1" y2="19.8"/>
-	<line class="st0" x1="15.6" y1="18.4" x2="15" y2="19.8"/>
-</g>
-<g>
-	<g>
-		<path class="st0" d="M7,16.2c-2-0.3-3.4-2-3.4-4.1c0-1.2,0.4-2.2,1.2-2.9c1-1,2.4-1.4,4-0.9c1-3,4.3-4.9,7.7-3.8
-			c2,0.7,3.5,2.4,3.9,4.4c0.6,2.9-1,5.5-3.3,6.7"/>
-	</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <line class="st0" x1="10.7366" y1="14.7481" x2="10.1366" y2="16.1481"/>
+  <line class="st0" x1="14.3366" y1="14.7481" x2="13.7366" y2="16.1481"/>
+  <line class="st0" x1="7.5366" y1="18.6481" x2="6.9366" y2="20.0481"/>
+  <line class="st0" x1="11.5366" y1="18.6481" x2="10.9366" y2="20.0481"/>
+  <line class="st0" x1="15.4366" y1="18.6481" x2="14.8366" y2="20.0481"/>
+  <path class="st0" d="M6.6156,16.729c-2.1268-.319-3.6156-2.1268-3.6156-4.3599,0-1.2761.4254-2.3395,1.2761-3.0839,1.0634-1.0634,2.5522-1.4888,4.2536-.9571,1.0634-3.1902,4.5726-5.2107,8.1882-4.0409,2.1268.7444,3.7219,2.5522,4.1473,4.679.638,3.0839-1.0634,5.8487-3.5092,7.1248"/>
 </svg>

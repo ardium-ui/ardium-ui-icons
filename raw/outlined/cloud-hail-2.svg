@@ -1,16 +1,19 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style>
-<g>
-	<g>
-		<path class="st0" d="M7,15.5c-2-0.3-3.4-2-3.4-4.1c0-2.3,1.8-4.1,4.1-4.1c0.4,0.2,0.8,0.2,1.1,0.3"/>
-		<path class="st0" d="M8.8,7.6c0.8-2.4,3.1-4.1,5.7-4.1c3.3,0,6,2.7,6,6c0,2.4-1.4,4.5-3.4,5.4"/>
-		<line class="st0" x1="10.9" y1="13.9" x2="10.3" y2="15.3"/>
-		<line class="st0" x1="14.5" y1="13.9" x2="13.9" y2="15.3"/>
-		<line class="st0" x1="11.7" y1="17.8" x2="11.1" y2="19.2"/>
-	</g>
-	<polygon class="st0" points="7.9,17.9 6.4,17.9 5.6,19.2 6.4,20.5 7.9,20.5 8.6,19.2 	"/>
-	<polygon class="st0" points="16.2,17.9 14.7,17.9 13.9,19.2 14.7,20.5 16.2,20.5 16.9,19.2 	"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M17.3787,15.4217c2.1302-.9586,3.6213-3.1953,3.6213-5.7515,0-3.5148-2.8757-6.3905-6.3905-6.3905-2.7692,0-5.2189,1.8107-6.071,4.3669-.3119-.1738-.7458-.316-1.1716-.3195-2.4497,0-4.3669,1.9172-4.3669,4.3669,0,2.2367,1.4911,4.0473,3.6213,4.3669"/>
+  <line class="st0" x1="10.85" y1="14.1203" x2="10.25" y2="15.5203"/>
+  <line class="st0" x1="14.45" y1="14.1203" x2="13.85" y2="15.5203"/>
+  <line class="st0" x1="11.65" y1="18.0203" x2="11.05" y2="19.4203"/>
+  <polygon class="st0" points="7.85 18.1203 6.35 18.1203 5.55 19.4203 6.35 20.7203 7.85 20.7203 8.55 19.4203 7.85 18.1203"/>
+  <polygon class="st0" points="16.15 18.1203 14.65 18.1203 13.85 19.4203 14.65 20.7203 16.15 20.7203 16.85 19.4203 16.15 18.1203"/>
 </svg>

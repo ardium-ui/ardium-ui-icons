@@ -1,14 +1,18 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-</style>
-<path class="st0" d="M14.9998,2.5v2"/>
-<path class="st0" d="M9.0002,2.5v2"/>
-<path class="st0" d="M16.0168,3.5H7.9912c-2.6108,0-4.2407,1.421-4.2407,4.032v8.862
-	c0,2.653,1.6299,4.106,4.2407,4.106h8.0185c2.6188,0,4.2407-1.428,4.2407-4.041V7.532C20.2575,4.921,18.6356,3.5,16.0168,3.5z"/>
-<g>
-	<polyline class="st0" points="8.1586,10.8445 10.0027,9 10.0027,16 	"/>
-	<polyline class="st0" points="13.9973,10.8445 15.8414,9 15.8414,16 	"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="st0" points="8.1586 10.8445 10.0027 9 10.0027 16"/>
+    <polyline class="st0" points="13.9973 10.8445 15.8414 9 15.8414 16"/>
+  </g>
+  <path class="st0" d="M20.98,7.54v8.93c0,2.94-1.91,4.75-4.97,4.75H7.99c-3.06,0-4.97-1.85-4.97-4.83V7.54c0-.1,0-.19.01-.28.11-2.53,1.6899-4.18,4.24-4.44v1.69c0,.4.33.73.73.73.1,0,.19-.02.27-.06v-2.67c0-.21.09-.4.23-.53.13-.12.31-.2.5-.2.4,0,.73.33.73.73v.27h3.55v1.73c0,.4.3199.73.72.73.1,0,.2-.02.28-.06v-2.67c0-.2.08-.39.22-.53.13-.12.3-.2.5-.2.4,0,.72.33.72.73v.27h.3c1.55,0,2.83.47,3.7,1.34.76.77,1.2,1.85,1.25,3.14.01.09.01.19.01.28Z"/>
 </svg>
