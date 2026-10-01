@@ -2,18 +2,11 @@
     <defs>
     <style>
       .st0 {
-        stroke-miterlimit: 10;
-      }
-
-      .st0, .st1 {
         fill: none;
         stroke: #000;
         stroke-linecap: round;
-        stroke-width: 1.5px;
-      }
-
-      .st1 {
         stroke-linejoin: round;
+        stroke-width: 1.5px;
       }
     </style>
   </defs>

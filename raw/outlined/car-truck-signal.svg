@@ -2,17 +2,10 @@
     <defs>
     <style>
       .st0 {
-        stroke-width: 1.44px;
-      }
-
-      .st0, .st1 {
         fill: none;
         stroke: #000;
         stroke-linecap: round;
         stroke-linejoin: round;
-      }
-
-      .st1 {
         stroke-width: 1.5px;
       }
     </style>
