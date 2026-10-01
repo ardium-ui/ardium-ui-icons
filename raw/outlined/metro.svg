@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M16.5,21H7.5c-2.5,0-4.5-2-4.5-4.5V7.5c0-2.5,2-4.5,4.5-4.5h9c2.5,0,4.5,2,4.5,4.5v9c0,2.5-2,4.5-4.5,4.5Z"/>
+  <polyline class="st0" points="16.5 16.5 16.5 7.5 12 15.8571 7.5 7.5 7.5 16.5"/>
+</svg>
