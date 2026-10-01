@@ -8,6 +8,7 @@
 @use "../../../node_modules/@ardium-ui/ui/themes/default/checkbox.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/modal.scss";
 @use "../../../node_modules/@ardium-ui/ui/themes/default/dialog.scss";
+@use "../../../node_modules/@ardium-ui/ui/themes/default/inputs/input.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
@@ -18,74 +19,76 @@
   --ard-darken-overlay-strong: rgba(0, 0, 0, 50%);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-
-  &:has(.ard-modal) {
-    position: fixed;
-    width: 100%;
-    overflow-y: scroll;
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  font-family: "Inter", sans-serif;
-  height: 100%;
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
 
-  //TODO remove
-  // background: #999;
-  // --ard-bg: #999;
-}
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-h2 {
-  font-size: 1.125rem;
-  text-align: center;
-}
-.align-left {
-  text-align: left;
-}
-button,
-a {
-  cursor: pointer;
-}
-.hidden {
-  display: none !important;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    &:has(.ard-modal) {
+      position: fixed;
+      width: 100%;
+      overflow-y: scroll;
+    }
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    height: 100%;
+
+    //TODO remove
+    // background: #999;
+    // --ard-bg: #999;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  h2 {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  .align-left {
+    text-align: left;
+  }
+  button,
+  a {
+    cursor: pointer;
+  }
+  .hidden {
+    display: none !important;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
 }
 
 // overrides

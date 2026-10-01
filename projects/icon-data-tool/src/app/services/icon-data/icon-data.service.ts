@@ -8,7 +8,7 @@ import {
   OnDestroy,
   signal,
 } from '@angular/core';
-import { arraySignal, setSignal } from '@ardium-ui/devkit';
+import { arraySignal, setSignal, throttledSignal } from '@ardium-ui/devkit';
 import { IconCategory } from '@components/category-selector/categories';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 import { ICON_DATA as EXISTING_ICON_DATA } from '../../data/existing-icon-data';
@@ -29,9 +29,20 @@ export class IconDataService implements OnDestroy {
   private readonly _modalController = inject(ModalControllerService);
 
   private readonly _iconData = arraySignal(
-    mergeIconDataWithExisting(ICON_LIST, EXISTING_ICON_DATA)
+    mergeIconDataWithExisting(ICON_LIST, EXISTING_ICON_DATA),
   );
   public readonly iconData = this._iconData.asReadonly();
+
+  public readonly searchQuery = throttledSignal<string>('', 500);
+
+  public readonly filteredIconData = computed(() => {
+    const query = this.searchQuery().toLowerCase();
+    if (!query) return this.iconData();
+
+    return this.iconData().filter((icon) =>
+      icon.name.toLowerCase().includes(query),
+    );
+  });
 
   private readonly _selectedIconIndexes = setSignal<number>();
   public readonly selectedIconIndexes = this._selectedIconIndexes.asReadonly();
@@ -39,13 +50,13 @@ export class IconDataService implements OnDestroy {
   private readonly _lastSelectedIndex = signal<number | null>(null);
 
   readonly isAnyIconSelected = computed<boolean>(
-    () => !this._selectedIconIndexes.isEmpty()
+    () => !this._selectedIconIndexes.isEmpty(),
   );
 
   toggleSelectionStateForRowAndItem(
     rowIndex: number,
     itemIndex: number,
-    newState?: boolean
+    newState?: boolean,
   ): void {
     const indexToToggle = this.iconsPerRow() * rowIndex + itemIndex;
     const isSelected = this._selectedIconIndexes.has(indexToToggle);
@@ -60,7 +71,7 @@ export class IconDataService implements OnDestroy {
   }
   selectItemsBetweenThisAndLastSelected(
     rowIndex: number,
-    itemIndex: number
+    itemIndex: number,
   ): void {
     const currentIndex = this.iconsPerRow() * rowIndex + itemIndex;
     const lastSelectedIndex = this._lastSelectedIndex() ?? currentIndex;
@@ -119,8 +130,8 @@ export class IconDataService implements OnDestroy {
     this._modalController.openModal(
       ModalType.Tags,
       groupTags(
-        this._iconData().filter((_, i) => this.selectedIconIndexes().has(i))
-      )
+        this._iconData().filter((_, i) => this.selectedIconIndexes().has(i)),
+      ),
     );
   }
 
@@ -133,7 +144,7 @@ export class IconDataService implements OnDestroy {
       (_, i) =>
         `(min-width: ${i * this.ICON_SIZE + 16}px) and (max-width: ${
           (i + 1) * this.ICON_SIZE + 16 - 0.02
-        }px)`
+        }px)`,
     );
 
   private readonly _iconsPerRow = signal<number>(1);
@@ -160,7 +171,7 @@ export class IconDataService implements OnDestroy {
       this._sub = this._http
         .post(
           'http://localhost:7243/update-homepage-icon-data',
-          this._iconData()
+          this._iconData(),
         )
         .subscribe();
 

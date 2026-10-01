@@ -263,7 +263,7 @@
                 "input": "projects/icon-data-tool/public"
               }
             ],
-            "styles": ["projects/icon-data-tool/src/styles.scss"]
+            "styles": ["projects/icon-data-tool/src/layers.css", "projects/icon-data-tool/src/styles.scss"]
           },
           "configurations": {
             "production": {

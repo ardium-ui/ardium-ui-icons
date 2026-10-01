@@ -1,23 +1,30 @@
 <div class="left-container">
   @if (!iconDataService.isAnyIconSelected()) {
-  <div class="logo-container">
-    <img src="https://placehold.co/32x32/png" alt="logo" />
-    <span>Icon Data Tool</span>
-  </div>
+    <div class="logo-container">
+      <img src="https://placehold.co/32x32/png" alt="logo" />
+      <span>Icon Data Tool</span>
+    </div>
   } @else {
-  <div class="selected-container">
-    <ard-icon-button color="none" (click)="iconDataService.unselectAll()">
-      <ard-icon>close</ard-icon>
-    </ard-icon-button>
-    {{ iconDataService.selectedIconIndexes.size() | number : "1.0-0" }} selected
-  </div>
-  <div class="buttons">
-    <ard-button (click)="iconDataService.openCategorySelectionModal()">
-      <ard-icon>category</ard-icon> Set Category
-    </ard-button>
-    <ard-button (click)="iconDataService.openTagsManagementModal()">
-      <ard-icon>sell</ard-icon> Manage Tags
-    </ard-button>
-  </div>
+    <div class="selected-container">
+      <ard-icon-button color="none" (click)="iconDataService.unselectAll()">
+        <ard-icon>close</ard-icon>
+      </ard-icon-button>
+      {{ iconDataService.selectedIconIndexes.size() | number: "1.0-0" }}
+      selected
+    </div>
+    <div class="buttons">
+      <ard-button (click)="iconDataService.openCategorySelectionModal()">
+        <ard-icon>category</ard-icon> Set Category
+      </ard-button>
+      <ard-button (click)="iconDataService.openTagsManagementModal()">
+        <ard-icon>sell</ard-icon> Manage Tags
+      </ard-button>
+    </div>
   }
+</div>
+<div class="right-container">
+  <ard-input
+    placeholder="Search icons..."
+    [(value)]="iconDataService.searchQuery"
+  />
 </div>
