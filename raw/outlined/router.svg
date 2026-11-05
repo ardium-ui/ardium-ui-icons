@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 1.5px;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="3" y="13.0307" width="18" height="6" rx="2.5" ry="2.5"/>
+  <circle class="st0" cx="6" cy="16.0307" r=".1008"/>
+  <circle class="st0" cx="9.5" cy="16.0307" r=".1008"/>
+  <line class="st0" x1="17.5" y1="13.0307" x2="17.5" y2="5.5307"/>
+  <g>
+    <path class="st0" d="M12.375,10.4057c0-1.3807,1.1193-2.5,2.5-2.5"/>
+    <circle class="st0" cx="14.875" cy="10.4057" r=".125"/>
+    <path class="st0" d="M10,10.4057c0-2.6924,2.1826-4.875,4.875-4.875"/>
+  </g>
+</svg>
