@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+    <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <circle class="st0" cx="12.6116" cy="4.63" r="1.63"/>
+  <path class="st0" d="M10.2366,10.37c.238-.9628,1.0633-1.625,2.375-1.625s1.9572.7297,2.375,1.625c0,0,.196.7436.8625.88h1.5125"/>
+  <circle class="st0" cx="11.2244" cy="16.75" r="4.25"/>
+  <polyline class="st0" points="8.652 13.3686 7.3616 9.7237 5.3616 9.7237"/>
+  <polyline class="st0" points="15.3126 15.5848 17.1713 15.5848 18.6384 19.753"/>
+</svg>
